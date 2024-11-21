@@ -1,3 +1,8 @@
+# Files too large
+notebook/genome/*
+notebook/fastq/qc/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
