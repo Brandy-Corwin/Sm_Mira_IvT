@@ -1,7 +1,12 @@
 # Files too large
 notebook/genome/*
 notebook/fastq/qc/*
+notebook/trimmed/*
 
+**/.snakemake/
+pipeline/genome/*
+pipeline/fastq/qc/*
+pipeline/trimmed/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
