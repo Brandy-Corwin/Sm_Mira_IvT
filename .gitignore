@@ -2,6 +2,7 @@
 notebook/genome/*
 notebook/fastq/qc/*
 notebook/trimmed/*
+notebook/alignment/*
 
 **/.snakemake/
 pipeline/genome/*
