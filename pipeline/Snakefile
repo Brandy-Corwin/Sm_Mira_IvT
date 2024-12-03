@@ -1,26 +1,28 @@
-# Change code to be paired end
-# Add environment
-
 configfile: "config.yaml"
 
 rule all:
     input:
-        expand("trimmed/qc/{sample}_fastqc.html", sample=config["sample"]),
-        expand("fastq/qc/{sample}_fastqc.html", sample=config["sample"])
+        expand("trimmed/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
+        expand("fastq/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
+        "alignment/star/second-pass.final.out",
+        expand("alignment/hisat/{sample}.sam", sample=config["sample"])
         #"reports/multiqc_report.html"
 
 rule fastq_qc:
     input:
-        "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}.fastq.gz"
+        read1 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R1_001.fastq.gz",
+        read2 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R2_001.fastq.gz"
     output:
-        html="fastq/qc/{sample}_fastqc.html",
-        zip="fastq/qc/{sample}_fastqc.zip"
+        read1_html="fastq/qc/{sample}_R1_001_fastqc.html",
+        read1_zip="fastq/qc/{sample}_R1_001_fastqc.zip",
+        read2_html="fastq/qc/{sample}_R2_001_fastqc.html",
+        read2_zip="fastq/qc/{sample}_R2_001_fastqc.zip"
     params:
         outdir="fastq/qc"
     threads:
         32
     shell:
-        "fastqc -t {threads} {input} -o {params.outdir}"
+        "fastqc -t {threads} {input.read1} {input.read2} -o {params.outdir}"
 
 rule trim_filter:
     input:
@@ -78,7 +80,8 @@ rule star_sa:
 
 rule star_align_first:
     input:
-        expand("trimmed/{sample}.fastq.gz", sample=config["sample"]),
+        expand("trimmed/{sample}_R1_001.fastq.gz", sample=config["sample"]),
+        expand("trimmed/{sample}_R2_001.fastq.gz", sample=config["sample"]),
         genome_dir="genome/star",
         manifest="manifest.tsv"
     output:
@@ -87,7 +90,7 @@ rule star_align_first:
         alignment="alignment/star/Aligned.sortedByCoord.out.bam",
         outdir=directory("alignment/star/")
     threads:
-        32
+        16
     run:
         shell("STAR \
             --runThreadN {threads} \
@@ -110,7 +113,7 @@ rule star_align_second:
     output:
         out="alignment/star/second-pass.final.out"
     threads:
-        32
+        16
     run:
         shell("STAR \
             --runThreadN {threads} \
@@ -125,148 +128,160 @@ rule star_align_second:
             --sjdbFileChrStartEnd {input.sj}")
         shell("cp alignment/star/Log.final.out {output.out}")
 
-# see if you can make this rule better
+rule hisat_index:
+    input:
+        genome="genome/genome.fa",
+        annotations="genome/annotations.gtf"
+    output:
+        directory("genome/hisat/")
+    run:
+        shell("hisat2_extract_splice_sites.py {input.annotations} > genome/hisat/hisat_ss.tsv")
+        shell("hisat2_extract_exons.py {input.annotations} > genome/hisat/hisat_exons.tsv")
+        shell("hisat2-build {input.genome} genome/hisat/genome -p 16 --ss genome/hisat/hisat_ss.tsv --exon genome/hisat/hisat_exons.tsv")
+
 rule hisat_align:
     input:
         "genome/genome.fa",
         "genome/annotations.gtf",
-        files="trimmed/{sample}.fastq.gz",
+        files_1="trimmed/{sample}_R1_001.fastq.gz",
+        files_2="trimmed/{sample}_R2_001.fastq.gz",
         index_dir="genome/hisat/"
     params:
-        genome_dir="genome/hisat/genome"
+        genome_dir="genome/hisat/genome",
+        rgs=config["rg"]
     output:
         "alignment/hisat/{sample}.sam"
     threads:
+        16
+    run:
+        #shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {wildcards.sample} --rg SM:{wildcards.sample} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
+        #see if below line works
+        shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {params.rgs} --rg SM:{params.rgs} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
+
+rule convert_hisat:
+    input:
+        "alignment/hisat/{sample}.sam"
+    output:
+        "alignment/hisat/{sample}.bam"
+    threads:
         32
     run:
-        shell("hisat2 {params.genome_dir} -p {threads} -U {input.files} --rg-id {wildcards.sample} --rg SM:{wildcards.sample} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
+        shell("samtools view -@ {threads} -b {input} | samtools sort -@ {threads} > {output}")
 
-# rule convert_hisat:
-#     input:
-#         "alignment/hisat/{sample}.sam"
-#     output:
-#         "alignment/hisat/{sample}.bam"
-#     threads:
-#         32
-#     run:
-#         shell("samtools view -@ {threads} -b {input} | samtools sort -@ {threads} > {output}")
+rule merge_hisat:
+    input:
+        expand("alignment/hisat/{sample}.bam", sample=config["sample"])
+    output:
+        "alignment/hisat/merged.bam"
+    threads:
+        32
+    run:
+        shell("samtools merge -@ {threads} {output}  {input}")
+        shell("samtools index -@ {threads} {output}")
 
-# rule merge_hisat:
-#     input:
-#         expand("alignment/hisat/{sample}.bam", sample=config["sample"])
-#     output:
-#         "alignment/hisat/merged.bam"
-#     threads:
-#         32
-#     run:
-#         shell("samtools merge -@ {threads} {output}  {input}")
-#         shell("samtools index -@ {threads} {output}")
+rule flagstat:
+    input:
+        "alignment/star/second-pass.final.out",
+        star="alignment/star/Aligned.sortedByCoord.out.bam",
+        hisat="alignment/hisat/merged.bam"
+    output:
+        touch("checkers/flagstat_completed.done")
+    threads:
+        32
+    run:
+        shell("samtools flagstat -@ {threads} {input.star}")
+        shell("samtools flagstat -@ {threads} {input.hisat}")
 
-# rule flagstat:
-#     input:
-#         "alignment/star/second-pass.final.out",
-#         star="alignment/star/Aligned.sortedByCoord.out.bam",
-#         hisat="alignment/hisat/merged.bam"
-#     output:
-#         touch("checkers/flagstat_completed.done")
-#     threads:
-#         32
-#     run:
-#         shell("samtools flagstat -@ {threads} {input.star}")
-#         shell("samtools flagstat -@ {threads} {input.hisat}")
+rule qualimap:
+    input:
+        gtf="genome/annotations.gtf",
+        star="alignment/star/Aligned.sortedByCoord.out.bam",
+        hisat="alignment/hisat/merged.bam",
+        check="checkers/flagstat_completed.done"
+    output:
+        star_bamqc=directory("qualimap/star/bam"),
+        star_rnaseq=directory("qualimap/star/rnaseq"),
+        hisat_bam=directory("qualimap/hisat/bam"),
+        hisat_rnaseq=directory("qualimap/hisat/rnaseq"),
+        outdir=directory("qualimap/")
+    threads:
+        32
+    run:
+        shell("qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam alignment/star/Aligned.sortedByCoord.out.bam --feature-file genome/annotations.gtf")
+        shell("qualimap rnaseq -outdir {output.star_rnaseq} -bam alignment/star/Aligned.sortedByCoord.out.bam -gtf genome/annotations.gtf")
+        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam alignment/hisat/merged.bam --feature-file genome/annotations.gtf")
+        shell("qualimap rnaseq -outdir {output.hisat_rnaseq} -bam alignment/hisat/merged.bam -gtf genome/annotations.gtf")
 
-# # Not running right in notebook
-# # rule qualimap:
-# #     input:
-# #         gtf="genome/annotations.gtf",
-# #         star="alignment/star/Aligned.sortedByCoord.out.bam",
-# #         hisat="alignment/hisat/merged.bam",
-# #         check="checkers/flagstat_completed.done"
-# #     output:
-# #         no_header_sam="alignment/star/no_header.sam",
-# #         no_header_bam="alignment/star/no_header.bam",
-# #         outidr_star=directory("alignment_qc/qualimap/star/bam"),
-# #         outdir=directory("alignment_qc/qualimap/")
-# #     threads:
-# #         32
-# #     run:
-# #         shell("samtools view -@ {threads} -h {input.star} | grep -v “^@RG” > {output.no_header_sam}")
-# #         shell("samtools view -@ {threads} -b {output.no_header_sam} > {output.no_header_bam}")
-# #         shell("qualimap bamqc -nt {threads} -outdir {output.outdir_star} -bam {output.no_header_bam} --feature-file {input.gtf} -p strand-specific-forward") 
+rule mark_duplicates:
+    input:
+        "checkers/flagstat_completed.done",
+        star="alignment/star/Aligned.sortedByCoord.out.bam",
+        hisat="alignment/hisat/merged.bam"
+    output:
+        star="counting/dedup/star.bam",
+        hisat="counting/dedup/hisat.bam",
+        star_log="counting/logs/star_duplicates",
+        hisat_log="counting/logs/hisat_duplicates"
+    run:
+        shell("picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} --VALIDATION_STRINGENCY SILENT")
+        shell("picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} --VALIDATION_STRINGENCY SILENT")
 
-# rule mark_duplicates:
-#     input:
-#         "checkers/flagstat_completed.done",
-#         star="alignment/star/Aligned.sortedByCoord.out.bam",
-#         hisat="alignment/hisat/merged.bam"
-#     output:
-#         star="counting/dedup/star.bam",
-#         hisat="counting/dedup/hisat.bam",
-#         star_log="counting/logs/star_duplicates",
-#         hisat_log="counting/logs/hisat_duplicates"
-#     run:
-#         shell("picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} --VALIDATION_STRINGENCY SILENT")
-#         shell("picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} --VALIDATION_STRINGENCY SILENT")
+rule count:
+    input:
+        annotations="genome/annotations.gtf",
+        star="counting/dedup/star.bam",
+        hisat="counting/dedup/hisat.bam"
+    output:
+        star="counting/counts/star_counts.tsv",
+        hisat="counting/counts/hisat_counts.tsv"
+    threads:
+        32
+    run:
+        shell("featureCounts -T 32 \
+        {input.star} \
+        -T {threads} \
+        -p \
+        --byReadGroup \
+        -s 1 \
+        --ignoreDup \
+        -M \
+        --fraction \
+        -a {input.annotations} \
+        -o {output.star} \
+        --verbose")
 
-# rule count:
-#     input:
-#         annotations="genome/annotations.gtf",
-#         star="counting/dedup/star.bam",
-#         hisat="counting/dedup/hisat.bam"
-#     output:
-#         star="counting/counts/star_counts.tsv",
-#         hisat="counting/counts/hisat_counts.tsv"
-#     threads:
-#         32
-#     run:
-#     # Do I need -t here?
-#         shell("featureCounts -T 32 \
-#         {input.star} \
-#         -T {threads} \
-#         --byReadGroup \
-#         -s 1 \
-#         --ignoreDup \
-#         -M \
-#         --fraction \
-#         -a {input.annotations} \
-#         -t 'CDS' \
-#         -o {output.star} \
-#         --verbose")
-    
-#     # Do I need -t here?
-#         shell("featureCounts -T 32 \
-#         {input.hisat} \
-#         -T {threads} \
-#         --byReadGroup \
-#         -s 1 \
-#         --ignoreDup \
-#         -M \
-#         --fraction \
-#         -a {input.annotations} \
-#         -t 'CDS' \
-#         -o {output.hisat} \
-#         --verbose")
+        shell("featureCounts -T 32 \
+        {input.hisat} \
+        -T {threads} \
+        -p \
+        --byReadGroup \
+        -s 1 \
+        --ignoreDup \
+        -M \
+        --fraction \
+        -a {input.annotations} \
+        -o {output.hisat} \
+        --verbose")
 
-# rule report:
-#     input:
-#         expand("fastq/qc/{sample}_fastqc.html", sample=config["sample"]),
-#         expand("trimmed/qc/{sample}_fastqc.html", sample=config["sample"]),
-#         "alignment/star/second-pass.final.out",
-#         expand("alignment/hisat/{sample}.sam", sample=config["sample"]),
-#         "alignment/hisat/merged.bam",
-#         "checkers/flagstat_completed.done",
-#         "counting/counts/star_counts.tsv",
-#         "counting/counts/hisat_counts.tsv"
-#         #"alignment/star/no_header.bam"?
-#     params:
-#         fastq_qc_dir=rules.fastq_qc.params.outdir,
-#         trim_qc_dir=rules.trim_qc.params.outdir,
-#         star_align_dir="alignment/star/",
-#         hisat_align_dir="alignment/hisat/",
-#         counts_dir="counting/counts/"
-#         #qualimap_dir=rules.qualimap.output.outdir
-#     output:
-#         "reports/multiqc_report.html"
-#     shell:
-#         "multiqc --force -d {params.fastq_qc_dir} {params.trim_qc_dir} {params.star_align_dir} {params.hisat_align_dir} {params.counts_dir} -n {output}"
-#         # ADD {params.qualimap_dir} to output
+rule report:
+    input:
+        expand("fastq/qc/{sample}_fastqc.html", sample=config["sample"]),
+        expand("trimmed/qc/{sample}_fastqc.html", sample=config["sample"]),
+        "alignment/star/second-pass.final.out",
+        expand("alignment/hisat/{sample}.sam", sample=config["sample"]),
+        "alignment/hisat/merged.bam",
+        "checkers/flagstat_completed.done",
+        "qualimap/",
+        "counting/counts/star_counts.tsv",
+        "counting/counts/hisat_counts.tsv"
+    params:
+        fastq_qc_dir=rules.fastq_qc.params.outdir,
+        trim_qc_dir=rules.trim_qc.params.outdir,
+        star_align_dir="alignment/star/",
+        hisat_align_dir="alignment/hisat/",
+        counts_dir="counting/counts/"
+        qualimap_dir=rules.qualimap.output.outdir
+    output:
+        "reports/multiqc_report.html"
+    shell:
+        "multiqc --force -d {params.fastq_qc_dir} {params.trim_qc_dir} {params.star_align_dir} {params.hisat_align_dir} {params.qualimap_dir} {params.counts_dir} -n {output}"
