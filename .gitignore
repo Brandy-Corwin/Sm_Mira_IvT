@@ -4,6 +4,11 @@ notebook/fastq/qc/*
 notebook/trimmed/*
 notebook/alignment/*
 
+notebook/genome_reduced/*
+notebook/fastq_reduced/qc/*
+notebook/trimmed_reduced/*
+notebook/alignment_reduced/*
+
 **/.snakemake/
 pipeline/genome/*
 pipeline/fastq/qc/*

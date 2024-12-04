@@ -207,10 +207,10 @@ rule qualimap:
     threads:
         32
     run:
-        shell("qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam alignment/star/Aligned.sortedByCoord.out.bam --feature-file genome/annotations.gtf")
-        shell("qualimap rnaseq -outdir {output.star_rnaseq} -bam alignment/star/Aligned.sortedByCoord.out.bam -gtf genome/annotations.gtf")
-        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam alignment/hisat/merged.bam --feature-file genome/annotations.gtf")
-        shell("qualimap rnaseq -outdir {output.hisat_rnaseq} -bam alignment/hisat/merged.bam -gtf genome/annotations.gtf")
+        shell("qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam {input.star} --feature-file {input.gtf}")
+        shell("qualimap rnaseq -outdir {output.star_rnaseq} -bam {input.star} -gtf {input.gtf}")
+        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam {input.hisat} --feature-file {input.gtf}")
+        shell("qualimap rnaseq -outdir {output.hisat_rnaseq} -bam {input.hisat} -gtf {input.gtf}")
 
 rule mark_duplicates:
     input:
