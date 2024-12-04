@@ -8,6 +8,7 @@ notebook/alignment/*
 pipeline/genome/*
 pipeline/fastq/qc/*
 pipeline/trimmed/*
+pipeline/alignment/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

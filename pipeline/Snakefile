@@ -133,11 +133,13 @@ rule hisat_index:
         genome="genome/genome.fa",
         annotations="genome/annotations.gtf"
     output:
-        directory("genome/hisat/")
+        directory("genome/hisat/"),
+        ss="genome/hisat/hisat_ss.tsv",
+        exons="genome/hisat/hisat_exons.tsv"
     run:
-        shell("hisat2_extract_splice_sites.py {input.annotations} > genome/hisat/hisat_ss.tsv")
-        shell("hisat2_extract_exons.py {input.annotations} > genome/hisat/hisat_exons.tsv")
-        shell("hisat2-build {input.genome} genome/hisat/genome -p 16 --ss genome/hisat/hisat_ss.tsv --exon genome/hisat/hisat_exons.tsv")
+        shell("hisat2_extract_splice_sites.py {input.annotations} > {output.ss}")
+        shell("hisat2_extract_exons.py {input.annotations} > {output.exons}")
+        shell("hisat2-build {input.genome} genome/hisat/genome -p 16 --ss {output.ss} --exon {output.exons}")
 
 rule hisat_align:
     input:
@@ -148,15 +150,13 @@ rule hisat_align:
         index_dir="genome/hisat/"
     params:
         genome_dir="genome/hisat/genome",
-        rgs=config["rg"]
+        rg= lambda wildcards, output: output[0][16:-13]
     output:
         "alignment/hisat/{sample}.sam"
     threads:
         16
     run:
-        #shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {wildcards.sample} --rg SM:{wildcards.sample} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
-        #see if below line works
-        shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {params.rgs} --rg SM:{params.rgs} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
+        shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {params.rg} --rg SM:{params.rg} --summary-file alignment/hisat/{wildcards.sample}.log --new-summary > {output}")
 
 rule convert_hisat:
     input:
@@ -279,7 +279,7 @@ rule report:
         trim_qc_dir=rules.trim_qc.params.outdir,
         star_align_dir="alignment/star/",
         hisat_align_dir="alignment/hisat/",
-        counts_dir="counting/counts/"
+        counts_dir="counting/counts/",
         qualimap_dir=rules.qualimap.output.outdir
     output:
         "reports/multiqc_report.html"
