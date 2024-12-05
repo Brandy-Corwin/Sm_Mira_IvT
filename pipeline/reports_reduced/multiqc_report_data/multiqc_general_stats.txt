@@ -1,0 +1,20 @@
+Sample	QualiMap_mqc-generalstats-qualimap-mapped_reads	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-median_sequence_length	QualiMap_mqc-generalstats-qualimap-percentage_aligned	QualiMap_mqc-generalstats-qualimap-mean_coverage	QualiMap_mqc-generalstats-qualimap-median_insert_size	QualiMap_mqc-generalstats-qualimap-50_x_pc	featureCounts_mqc-generalstats-featurecounts-percent_assigned	featureCounts_mqc-generalstats-featurecounts-Assigned	HISAT2_mqc-generalstats-hisat2-overall_alignment_rate	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences	QualiMap_mqc-generalstats-qualimap-percentage_aligned_on_target	QualiMap_mqc-generalstats-qualimap-1_x_pc	QualiMap_mqc-generalstats-qualimap-total_reads	QualiMap_mqc-generalstats-qualimap-30_x_pc	QualiMap_mqc-generalstats-qualimap-median_coverage	QualiMap_mqc-generalstats-qualimap-5_x_pc	QualiMap_mqc-generalstats-qualimap-10_x_pc	QualiMap_mqc-generalstats-qualimap-avg_gc	QualiMap_mqc-generalstats-qualimap-general_error_rate	STAR_mqc-generalstats-star-uniquely_mapped	STAR_mqc-generalstats-star-uniquely_mapped_percent	QualiMap_mqc-generalstats-qualimap-5_3_bias	QualiMap_mqc-generalstats-qualimap-regions_size	QualiMap_mqc-generalstats-qualimap-reads_aligned	QualiMap_mqc-generalstats-qualimap-regions_mapped_reads
+alignment_reduced | hisat | Int-01_S42_L005										65.41																			
+alignment_reduced | hisat | Int-02_S43_L005										19.62																			
+alignment_reduced | star |																								5558708.0	4.48				
+counting_reduced | counts | hisat								0.03229332754480048	22180																				
+counting_reduced | counts | star								0.09961159595636453	26504																				
+fastq_reduced | qc | Int-01_S42_L005_R1_001		151.0	151								73.15821097531398	49.0	36.36363636363637	12421987.0															
+fastq_reduced | qc | Int-01_S42_L005_R2_001		151.0	151								74.4516759037079	50.0	45.45454545454545	12421987.0															
+fastq_reduced | qc | Int-02_S43_L005_R1_001		151.0	151								68.19962108276289	50.0	45.45454545454545	15738415.0															
+fastq_reduced | qc | Int-02_S43_L005_R2_001		151.0	151								70.49757372103419	51.0	45.45454545454545	15738415.0															
+qualimap_reduced | hisat | bam | merged	21768917.0			40.11675422394968	18.4041										16.960912662765907		54263904.0						0.03				208164228.0		3692207.0
+qualimap_reduced | hisat | bam | raw_data_qualimapReport | bam						212	0.5846729823339292									19.840497282751194		1.077964269634262	0	5.837663904482186	3.2428386302760916	41.01015169420924							
+qualimap_reduced | hisat | rnaseq | merged																										1.83		21768917.0	
+qualimap_reduced | star | bam |	12943592.0			5.216523332957934	67.4703										83.0019364021981		248126792.0						0.0				208164228.0		10743432.0
+qualimap_reduced | star | bam | raw_data_qualimapReport | bam						289	2.1270489375340706									31.61342879718988		3.225988953298931	0	10.402364617613358	6.492820658888616	39.999235428339325							
+qualimap_reduced | star | rnaseq |																										1.71		12943592.0	
+trimmed_reduced | qc | Int-01_S42_L005_R1_001		133.54377731934588	141								74.98845371726858	48.0	36.36363636363637	12144782.0															
+trimmed_reduced | qc | Int-01_S42_L005_R2_001		143.6685723136076	151								73.89870864657168	48.0	18.181818181818183	12144782.0															
+trimmed_reduced | qc | Int-02_S43_L005_R1_001		135.8237908157444	141								70.2012852059454	48.0	36.36363636363637	14987170.0															
+trimmed_reduced | qc | Int-02_S43_L005_R2_001		145.9320796387844	151								69.01034983236387	49.0	27.27272727272727	14987170.0															

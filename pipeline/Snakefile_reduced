@@ -2,11 +2,8 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        expand("trimmed_reduced/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
-        expand("fastq_reduced/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
-        "alignment_reduced/star/second-pass.final.out",
-        expand("alignment_reduced/hisat/{sample}.sam", sample=config["sample"])
-        #"reports_reduced/multiqc_report.html"
+        "reports_reduced/multiqc_report.html"
+        # add outputs of diffexp here
 
 rule fastq_qc:
     input:
@@ -209,7 +206,7 @@ rule qualimap:
     run:
         shell("qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam {input.star} --feature-file {input.gtf}")
         shell("qualimap rnaseq -outdir {output.star_rnaseq} -bam {input.star} -gtf {input.gtf}")
-        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -{input.hisat} --feature-file {input.gtf}")
+        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam {input.hisat} --feature-file {input.gtf}")
         shell("qualimap rnaseq -outdir {output.hisat_rnaseq} -bam {input.hisat} -gtf {input.gtf}")
 
 rule mark_duplicates:
@@ -265,8 +262,10 @@ rule count:
 
 rule report:
     input:
-        expand("fastq_reduced/qc/{sample}_fastqc.html", sample=config["sample"]),
-        expand("trimmed_reduced/qc/{sample}_fastqc.html", sample=config["sample"]),
+        expand("fastq_reduced/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
+        expand("trimmed_reduced/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
+        expand("fastq_reduced/qc/{sample}_R2_001_fastqc.html", sample=config["sample"]),
+        expand("trimmed_reduced/qc/{sample}_R2_001_fastqc.html", sample=config["sample"]),
         "alignment_reduced/star/second-pass.final.out",
         expand("alignment_reduced/hisat/{sample}.sam", sample=config["sample"]),
         "alignment_reduced/hisat/merged.bam",
@@ -285,3 +284,13 @@ rule report:
         "reports_reduced/multiqc_report.html"
     shell:
         "multiqc --force -d {params.fastq_qc_dir} {params.trim_qc_dir} {params.star_align_dir} {params.hisat_align_dir} {params.qualimap_dir} {params.counts_dir} -n {output}"
+
+# rule diffexp:
+#     input:
+#         star="counting_reduced/counts/star_counts.tsv",
+#         hisat="counting_reduced/counts/hisat_counts.tsv",
+#         R_script="diffexp_reduced.R"
+#     output:
+#         #put output count tbale and plots here.
+#     shell:
+#         "Rscript {input.R_script}"

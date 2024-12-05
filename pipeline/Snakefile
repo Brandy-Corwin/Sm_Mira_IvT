@@ -2,11 +2,8 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        expand("trimmed/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
-        expand("fastq/qc/{sample}_R1_001_fastqc.html", sample=config["sample"]),
-        "alignment/star/second-pass.final.out",
-        expand("alignment/hisat/{sample}.sam", sample=config["sample"])
-        #"reports/multiqc_report.html"
+        "reports/multiqc_report.html",
+        #add outputs of diffexp here
 
 rule fastq_qc:
     input:
@@ -285,3 +282,13 @@ rule report:
         "reports/multiqc_report.html"
     shell:
         "multiqc --force -d {params.fastq_qc_dir} {params.trim_qc_dir} {params.star_align_dir} {params.hisat_align_dir} {params.qualimap_dir} {params.counts_dir} -n {output}"
+
+# rule diffexp:
+#     input:
+#         star="counting/counts/star_counts.tsv",
+#         hisat="counting/counts/hisat_counts.tsv",
+#         R_script="diffexp.R"
+#     output:
+#         #put output count tbale and plots here.
+#     shell:
+#         "Rscript {input.R_script}"

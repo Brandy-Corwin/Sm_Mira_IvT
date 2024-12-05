@@ -3,17 +3,34 @@ notebook/genome/*
 notebook/fastq/qc/*
 notebook/trimmed/*
 notebook/alignment/*
+notebook/qualimap/*
+notebook/checkers/*
+notebook/counting/*
 
 notebook/genome_reduced/*
 notebook/fastq_reduced/qc/*
 notebook/trimmed_reduced/*
 notebook/alignment_reduced/*
+notebook/qualimap_reduced/*
+notebook/checkers_reduced/*
+notebook/counting_reduced/*
 
 **/.snakemake/
 pipeline/genome/*
 pipeline/fastq/qc/*
 pipeline/trimmed/*
 pipeline/alignment/*
+pipeline/qualimap/*
+pipeline/checkers/*
+pipeline/counting/*
+
+pipeline/genome_reduced/*
+pipeline/fastq_reduced/qc/*
+pipeline/trimmed_reduced/*
+pipeline/alignment_reduced/*
+pipeline/qualimap_reduced/*
+pipeline/checkers_reduced/*
+pipeline/counting_reduced/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

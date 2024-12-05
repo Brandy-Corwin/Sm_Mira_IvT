@@ -1,0 +1,3 @@
+Sample	Unassigned_Overlapping_Length	Unassigned_Singleton	Unassigned_Read_Type	Unassigned_Duplicate	Unassigned_MultiMapping	percent_assigned	Unassigned_Ambiguity	Unassigned_Secondary	Unassigned_MappingQuality	Unassigned_NoFeatures	Unassigned_NonSplit	Total	Unassigned_Chimera	Unassigned_FragmentLength	Assigned	Unassigned_Unmapped
+counting_reduced | counts | hisat	0	0	0	2340488	0	0.03229332754480048	109	0	0	42227640	0	68682919	0	0	22180	24092502
+counting_reduced | counts | star	0	0	0	559730	0	0.09961159595636453	423	0	0	1795617	0	26607344	0	0	26504	24225070
