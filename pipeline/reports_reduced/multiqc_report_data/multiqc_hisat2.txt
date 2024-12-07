@@ -1,3 +1,9 @@
-Sample	paired_aligned_discord_one	paired_aligned_one	unpaired_total	unpaired_aligned_multi	overall_alignment_rate	unpaired_aligned_none	paired_aligned_multi	unpaired_aligned_one	paired_total	paired_aligned_none
-alignment_reduced | hisat | Int-01_S42_L005	318109	1176206	8750126	225199	65.41	8402485	6275404	122442	12144782	4375063
-alignment_reduced | hisat | Int-02_S43_L005	120233	478945	24264630	105194	19.62	24092502	2255677	66934	14987170	12132315
+Sample	unpaired_aligned_multi	paired_aligned_multi	paired_aligned_discord_one	paired_aligned_none	overall_alignment_rate	unpaired_aligned_none	unpaired_total	paired_total	unpaired_aligned_one	paired_aligned_one
+alignment_reduced | hisat | Int-01_S42_L005	222567	6353001	315433	4399339	65.3	8444280	8798678	12168802	131831	1101029
+alignment_reduced | hisat | Int-02_S43_L005	99513	2275688	119513	12201953	19.54	24232619	24403906	15058640	71774	461486
+alignment_reduced | hisat | Int-03_S44_L005	77453	1546876	168559	10921975	17.85	21692287	21843950	13203535	74210	566125
+alignment_reduced | hisat | Int-04_S45_L005	93674	1450438	353706	14847506	15.28	29483978	29695012	17401148	117360	749498
+alignment_reduced | hisat | Liv-01_S38_L005	117364	1288121	141704	18040002	9.14	35867385	36080004	19736635	95255	266808
+alignment_reduced | hisat | Liv-02_S39_L005	242529	4924367	480108	7133251	49.33	13814572	14266502	13632626	209401	1094900
+alignment_reduced | hisat | Liv-03_S40_L005	19638	272568	21565	19804531	1.98	39573394	39609062	20186446	16030	87782
+alignment_reduced | hisat | Liv-04_S41_L005	71081	1049443	267593	11041791	16.48	21909113	22083582	13116682	103388	757855

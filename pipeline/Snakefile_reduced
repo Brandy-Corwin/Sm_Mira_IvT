@@ -31,7 +31,7 @@ rule trim_filter:
     threads:
         32
     shell:
-        "cutadapt -j {threads} -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 --cut 10 -o {output.read1} -p {output.read2} {input.read1} {input.read2}"
+        "cutadapt -j {threads} -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o {output.read1} -p {output.read2} {input.read1} {input.read2}"
 
 rule trim_qc:
     input:
@@ -72,7 +72,7 @@ rule star_sa:
             --genomeDir {output}\
             --genomeFastaFiles {input.genome} \
             --sjdbGTFfile {input.annotations} \
-            --sjdbOverhang 140 \
+            --sjdbOverhang 139 \
             --genomeSAindexNbases 13")
 
 rule star_align_first:
@@ -220,8 +220,8 @@ rule mark_duplicates:
         star_log="counting_reduced/logs/star_duplicates",
         hisat_log="counting_reduced/logs/hisat_duplicates"
     run:
-        shell("picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} --VALIDATION_STRINGENCY SILENT")
-        shell("picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} --VALIDATION_STRINGENCY SILENT")
+        shell("picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} -Xmx100g --VALIDATION_STRINGENCY SILENT")
+        shell("picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} -Xmx100g --VALIDATION_STRINGENCY SILENT")
 
 rule count:
     input:

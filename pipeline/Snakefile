@@ -2,7 +2,9 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        "reports/multiqc_report.html",
+        expand("alignment/hisat/{sample}.sam", sample=config["sample"]),
+        "alignment/star/second-pass.final.out"
+        #"reports/multiqc_report.html",
         #add outputs of diffexp here
 
 rule fastq_qc:
@@ -31,7 +33,7 @@ rule trim_filter:
     threads:
         32
     shell:
-        "cutadapt -j {threads} -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 --cut 10 -o {output.read1} -p {output.read2} {input.read1} {input.read2}"
+        "cutadapt -j {threads} -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o {output.read1} -p {output.read2} {input.read1} {input.read2}"
 
 rule trim_qc:
     input:
@@ -72,7 +74,7 @@ rule star_sa:
             --genomeDir {output}\
             --genomeFastaFiles {input.genome} \
             --sjdbGTFfile {input.annotations} \
-            --sjdbOverhang 140 \
+            --sjdbOverhang 139 \
             --genomeSAindexNbases 13")
 
 rule star_align_first:
