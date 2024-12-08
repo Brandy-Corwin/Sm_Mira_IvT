@@ -58,6 +58,8 @@ ggsave("plots_reduced/star_dist_plot.png")
 star_pca_fit <- t(log10(star_counts_m + 1)) |> 
   prcomp(scale = TRUE)
 
+
+# age starts here: fix below
 star_pca_fit |>
   augment(t(star_counts_m)) |>
   dplyr::rename(sample = .rownames) |>
@@ -160,6 +162,8 @@ ggsave("plots_reduced/hisat_dist_plot.png")
 hisat_pca_fit <- t(log10(hisat_counts_m + 1)) |> 
   prcomp(scale = TRUE)
 
+
+# age starts here: fix below
 hisat_pca_fit |>
   augment(t(hisat_counts_m)) |>
   dplyr::rename(sample = .rownames) |>
