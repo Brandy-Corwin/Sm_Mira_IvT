@@ -1,9 +1,13 @@
+# conda env not working right. Ask how to use --use-conda
+
+
 configfile: "config.yaml"
 
 rule all:
     input:
-        "reports_reduced/multiqc_report.html"
-        # add outputs of diffexp here
+        "reports_reduced/multiqc_report.html",
+        "count_matrices_reduced",
+        "plots_reduced"
 
 rule fastq_qc:
     input:
@@ -18,6 +22,8 @@ rule fastq_qc:
         outdir="fastq_reduced/qc"
     threads:
         32
+    conda:
+        "env.yaml"
     shell:
         "fastqc -t {threads} {input.read1} {input.read2} -o {params.outdir}"
 
@@ -30,6 +36,8 @@ rule trim_filter:
         read2 = "trimmed_reduced/{sample}_R2_001.fastq.gz"
     threads:
         32
+    conda:
+        "env.yaml"
     shell:
         "cutadapt -j {threads} -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o {output.read1} -p {output.read2} {input.read1} {input.read2}"
 
@@ -46,6 +54,8 @@ rule trim_qc:
         outdir="trimmed_reduced/qc"
     threads:
         32
+    conda:
+        "env.yaml"
     shell:
         "fastqc -t {threads} {input.read1} {input.read2} -o {params.outdir}"
 
@@ -53,9 +63,11 @@ rule fetch_genome:
     output:
         genome="genome_reduced/genome.fa",
         annotations="genome_reduced/annotations.gtf"
-    run:
-        shell("wget -nc -O - https://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS19/species/schistosoma_mansoni/PRJEA36577/schistosoma_mansoni.PRJEA36577.WBPS19.genomic.fa.gz | gzip -f -d > {output.genome}")
-        shell("wget -O - https://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS19/species/schistosoma_mansoni/PRJEA36577/schistosoma_mansoni.PRJEA36577.WBPS19.canonical_geneset.gtf.gz | gzip -f -d > {output.annotations}")
+    shell:
+        """
+        wget -nc -O - https://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS19/species/schistosoma_mansoni/PRJEA36577/schistosoma_mansoni.PRJEA36577.WBPS19.genomic.fa.gz | gzip -f -d > {output.genome}
+        wget -O - https://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS19/species/schistosoma_mansoni/PRJEA36577/schistosoma_mansoni.PRJEA36577.WBPS19.canonical_geneset.gtf.gz | gzip -f -d > {output.annotations}
+        """
 
 rule star_sa:
     input:
@@ -65,15 +77,19 @@ rule star_sa:
         directory("genome_reduced/star")
     threads:
         32
-    run:
-        shell("STAR \
+    conda:
+        "env.yaml"
+    shell:
+        """
+        STAR \
             --runThreadN {threads} \
             --runMode genomeGenerate \
             --genomeDir {output}\
             --genomeFastaFiles {input.genome} \
             --sjdbGTFfile {input.annotations} \
             --sjdbOverhang 139 \
-            --genomeSAindexNbases 13")
+            --genomeSAindexNbases 13
+        """
 
 rule star_align_first:
     input:
@@ -88,8 +104,11 @@ rule star_align_first:
         outdir=directory("alignment_reduced/star/")
     threads:
         16
-    run:
-        shell("STAR \
+    conda:
+        "env.yaml"
+    shell:
+        """
+        STAR \
             --runThreadN {threads} \
             --runMode alignReads \
             --genomeDir {input.genome_dir} \
@@ -97,8 +116,9 @@ rule star_align_first:
             --readFilesCommand zcat \
             --outSAMtype BAM SortedByCoordinate \
             --outSAMunmapped Within \
-            --outFileNamePrefix alignment_reduced/star/")
-        shell("cp alignment_reduced/star/Log.final.out {output.out}")
+            --outFileNamePrefix alignment_reduced/star/
+        cp alignment_reduced/star/Log.final.out {output.out}
+        """
 
 rule star_align_second:
     input:
@@ -111,8 +131,11 @@ rule star_align_second:
         out="alignment_reduced/star/second-pass.final.out"
     threads:
         16
-    run:
-        shell("STAR \
+    conda:
+        "env.yaml"
+    shell:
+        """
+        STAR \
             --runThreadN {threads} \
             --runMode alignReads \
             --genomeDir {input.genome_dir} \
@@ -122,8 +145,9 @@ rule star_align_second:
             --outSAMunmapped Within \
             --outSAMattributes NH HI AS nM RG \
             --outFileNamePrefix alignment_reduced/star/ \
-            --sjdbFileChrStartEnd {input.sj}")
-        shell("cp alignment_reduced/star/Log.final.out {output.out}")
+            --sjdbFileChrStartEnd {input.sj}
+        cp alignment_reduced/star/Log.final.out {output.out}
+        """
 
 rule hisat_index:
     input:
@@ -133,10 +157,14 @@ rule hisat_index:
         directory("genome_reduced/hisat/"),
         ss="genome_reduced/hisat/hisat_ss.tsv",
         exons="genome_reduced/hisat/hisat_exons.tsv"
-    run:
-        shell("hisat2_extract_splice_sites.py {input.annotations} > {output.ss}")
-        shell("hisat2_extract_exons.py {input.annotations} > {output.exons}")
-        shell("hisat2-build {input.genome} genome_reduced/hisat/genome -p 16 --ss {output.ss} --exon {output.exons}")
+    conda:
+        "env.yaml"
+    shell:
+        """
+        hisat2_extract_splice_sites.py {input.annotations} > {output.ss}
+        hisat2_extract_exons.py {input.annotations} > {output.exons}
+        hisat2-build {input.genome} genome_reduced/hisat/genome -p 16 --ss {output.ss} --exon {output.exons}
+        """
 
 rule hisat_align:
     input:
@@ -152,8 +180,10 @@ rule hisat_align:
         "alignment_reduced/hisat/{sample}.sam"
     threads:
         16
-    run:
-        shell("hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {params.rg} --rg SM:{params.rg} --summary-file alignment_reduced/hisat/{wildcards.sample}.log --new-summary > {output}")
+    conda:
+        "env.yaml"
+    shell:
+        "hisat2 {params.genome_dir} -p {threads} -1 {input.files_1} -2 {input.files_2} --rg-id {params.rg} --rg SM:{params.rg} --summary-file alignment_reduced/hisat/{wildcards.sample}.log --new-summary > {output}"
 
 rule convert_hisat:
     input:
@@ -162,8 +192,10 @@ rule convert_hisat:
         "alignment_reduced/hisat/{sample}.bam"
     threads:
         32
-    run:
-        shell("samtools view -@ {threads} -b {input} | samtools sort -@ {threads} > {output}")
+    conda:
+        "env.yaml"
+    shell:
+        "samtools view -@ {threads} -b {input} | samtools sort -@ {threads} > {output}"
 
 rule merge_hisat:
     input:
@@ -172,9 +204,13 @@ rule merge_hisat:
         "alignment_reduced/hisat/merged.bam"
     threads:
         32
-    run:
-        shell("samtools merge -@ {threads} {output}  {input}")
-        shell("samtools index -@ {threads} {output}")
+    conda:
+        "env.yaml"
+    shell:
+        """
+        samtools merge -@ {threads} {output}  {input}
+        samtools index -@ {threads} {output}
+        """
 
 rule flagstat:
     input:
@@ -185,9 +221,13 @@ rule flagstat:
         touch("checkers_reduced/flagstat_completed.done")
     threads:
         32
-    run:
-        shell("samtools flagstat -@ {threads} {input.star}")
-        shell("samtools flagstat -@ {threads} {input.hisat}")
+    conda:
+        "env.yaml"
+    shell:
+        """
+        samtools flagstat -@ {threads} {input.star}
+        samtools flagstat -@ {threads} {input.hisat}
+        """
 
 rule qualimap:
     input:
@@ -203,11 +243,15 @@ rule qualimap:
         outdir=directory("qualimap_reduced/")
     threads:
         32
-    run:
-        shell("qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam {input.star} --feature-file {input.gtf}")
-        shell("qualimap rnaseq -outdir {output.star_rnaseq} -bam {input.star} -gtf {input.gtf}")
-        shell("qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam {input.hisat} --feature-file {input.gtf}")
-        shell("qualimap rnaseq -outdir {output.hisat_rnaseq} -bam {input.hisat} -gtf {input.gtf}")
+    conda:
+        "env.yaml"
+    shell:
+        """
+        qualimap bamqc -nt {threads} -outdir {output.star_bamqc} -bam {input.star} --feature-file {input.gtf}
+        qualimap rnaseq -outdir {output.star_rnaseq} -bam {input.star} -gtf {input.gtf}
+        qualimap bamqc -nt {threads} -outdir {output.hisat_bam} -bam {input.hisat} --feature-file {input.gtf}
+        qualimap rnaseq -outdir {output.hisat_rnaseq} -bam {input.hisat} -gtf {input.gtf}
+        """
 
 rule mark_duplicates:
     input:
@@ -219,9 +263,13 @@ rule mark_duplicates:
         hisat="counting_reduced/dedup/hisat.bam",
         star_log="counting_reduced/logs/star_duplicates",
         hisat_log="counting_reduced/logs/hisat_duplicates"
-    run:
-        shell("picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} -Xmx100g --VALIDATION_STRINGENCY SILENT")
-        shell("picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} -Xmx100g --VALIDATION_STRINGENCY SILENT")
+    conda:
+        "env.yaml"
+    shell:
+        """
+        picard MarkDuplicates -I {input.star} -M {output.star_log} -O {output.star} -Xmx100g --VALIDATION_STRINGENCY SILENT
+        picard MarkDuplicates -I {input.hisat} -M {output.hisat_log} -O {output.hisat} -Xmx100g --VALIDATION_STRINGENCY SILENT
+        """
 
 rule count:
     input:
@@ -233,8 +281,11 @@ rule count:
         hisat="counting_reduced/counts/hisat_counts.tsv"
     threads:
         32
-    run:
-        shell("featureCounts -T 32 \
+    conda:
+        "env.yaml"
+    shell:
+        """
+        featureCounts -T 32 \
         {input.star} \
         -T {threads} \
         -p \
@@ -245,9 +296,9 @@ rule count:
         --fraction \
         -a {input.annotations} \
         -o {output.star} \
-        --verbose")
+        --verbose
 
-        shell("featureCounts -T 32 \
+        featureCounts -T 32 \
         {input.hisat} \
         -T {threads} \
         -p \
@@ -258,7 +309,8 @@ rule count:
         --fraction \
         -a {input.annotations} \
         -o {output.hisat} \
-        --verbose")
+        --verbose
+        """
 
 rule report:
     input:
@@ -282,15 +334,34 @@ rule report:
         qualimap_dir=rules.qualimap.output.outdir
     output:
         "reports_reduced/multiqc_report.html"
+    conda:
+        "env.yaml"
     shell:
         "multiqc --force -d {params.fastq_qc_dir} {params.trim_qc_dir} {params.star_align_dir} {params.hisat_align_dir} {params.qualimap_dir} {params.counts_dir} -n {output}"
 
-# rule diffexp:
-#     input:
-#         star="counting_reduced/counts/star_counts.tsv",
-#         hisat="counting_reduced/counts/hisat_counts.tsv",
-#         R_script="diffexp_reduced.R"
-#     output:
-#         #put output count tbale and plots here.
-#     shell:
-#         "Rscript {input.R_script}"
+rule diffexp:
+    input:
+        star="counting_reduced/counts/star_counts.tsv",
+        hisat="counting_reduced/counts/hisat_counts.tsv",
+        R_script="diffexp_reduced.R"
+    output:
+        directory("count_matrices_reduced/"),
+        directory("plots_reduced/"),
+        "count_matrices_reduced/star_counts_df.csv",
+        "count_matrices_reduced/star_counts_summary.csv",
+        "count_matrices_reduced/star_sample_summary.csv",
+        "count_matrices_reduced/star_counts_m.csv",
+        "count_matrices_reduced/hisat_counts_df.csv",
+        "count_matrices_reduced/hisat_counts_summary.csv",
+        "count_matrices_reduced/hisat_sample_summary.csv",
+        "count_matrices_reduced/hisat_counts_m.csv",
+        "plots_reduced/star_dist_plot.png",
+        "plots_reduced/star_pca_fit.png",
+        "plots_reduced/star_volcano_plot.png",
+        "plots_reduced/hisat_dist_plot.png",
+        "plots_reduced/hisat_pca_fit.png",
+        "plots_reduced/hisat_volcano_plot.png"
+    conda:
+        "env.yaml"
+    shell:
+        "Rscript {input.R_script}"

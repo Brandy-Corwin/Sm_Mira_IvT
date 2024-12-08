@@ -1,0 +1,2 @@
+Sample	Unassigned_NoFeatures	Total	Unassigned_Duplicate	Unassigned_Unmapped	percent_assigned	Unassigned_FragmentLength	Assigned	Unassigned_Read_Type	Unassigned_Overlapping_Length	Unassigned_MappingQuality	Unassigned_MultiMapping	Unassigned_Singleton	Unassigned_NonSplit	Unassigned_Ambiguity	Unassigned_Secondary	Unassigned_Chimera
+counting_reduced | counts_reduced | hisat	20263136	43797132	1582768	21909121	0.0957939437678248	0	41955	0	0	0	0	0	0	152	0	0
