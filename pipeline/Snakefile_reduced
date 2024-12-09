@@ -1,6 +1,3 @@
-# conda env not working right. Ask how to use --use-conda
-
-
 configfile: "config.yaml"
 
 rule all:
@@ -346,21 +343,7 @@ rule diffexp:
         R_script="diffexp_reduced.R"
     output:
         directory("count_matrices_reduced/"),
-        directory("plots_reduced/"),
-        "count_matrices_reduced/star_counts_df.csv",
-        "count_matrices_reduced/star_counts_summary.csv",
-        "count_matrices_reduced/star_sample_summary.csv",
-        "count_matrices_reduced/star_counts_m.csv",
-        "count_matrices_reduced/hisat_counts_df.csv",
-        "count_matrices_reduced/hisat_counts_summary.csv",
-        "count_matrices_reduced/hisat_sample_summary.csv",
-        "count_matrices_reduced/hisat_counts_m.csv",
-        "plots_reduced/star_dist_plot.png",
-        "plots_reduced/star_pca_fit.png",
-        "plots_reduced/star_volcano_plot.png",
-        "plots_reduced/hisat_dist_plot.png",
-        "plots_reduced/hisat_pca_fit.png",
-        "plots_reduced/hisat_volcano_plot.png"
+        directory("plots_reduced/")
     conda:
         "env.yaml"
     shell:

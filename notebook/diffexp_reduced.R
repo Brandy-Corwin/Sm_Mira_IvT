@@ -7,13 +7,13 @@ library(DESeq2)
 # get rid of age
 
 
-star_counts_df <- read_tsv("counting_reduced/counts/star_counts.tsv", comment = "#") |>
+star_counts_df <- read_tsv("notebook/counting_reduced/counts_reduced/star_counts.tsv", comment = "#") |>
              mutate(across(where(is.numeric), as.integer))
-write.csv(star_counts_df, "count_matrices_reduced/star_counts_df.csv")
+write.csv(star_counts_df, "notebook/count_matrices_reduced/star_counts_df.csv")
 
 star_counts_summary <- star_counts_df |>
     select(Geneid, contains('star.bam')) |>
-    rename_with(~str_remove(., "counting_reduced/dedup/star.bam:"), everything()) |>
+    rename_with(~str_remove(., "counting_reduced/dedup_reduced/star.bam:"), everything()) |>
     rowwise() |>
     mutate(total_counts = sum(c_across(where(is.numeric)), na.rm = T)) |>
     filter(total_counts >= 10)
@@ -21,7 +21,7 @@ write.csv(star_counts_summary, "count_matrices_reduced/star_counts_summary.csv")
 
 star_sample_summary <- star_counts_df |>
     select(Geneid, contains('star.bam')) |>
-    rename_with(~str_remove(., "counting_reduced/dedup/star.bam:"), everything()) |>
+    rename_with(~str_remove(., "counting_reduced/dedup_reduced/star.bam:"), everything()) |>
     pivot_longer(-Geneid, names_to = 'sample', values_to = 'count') |>
     filter(count > 0) |>
     group_by(Geneid) |>
@@ -32,7 +32,7 @@ write.csv(star_sample_summary, "count_matrices_reduced/star_sample_summary.csv")
 star_genes_to_remove = star_sample_summary$Geneid
 
 star_counts_filt <- star_counts_summary |>
-    filter(!Geneid %in% genes_to_remove) |>
+    filter(!Geneid %in% star_genes_to_remove) |>
     arrange(Geneid) |>
     select(-total_counts)
 
@@ -40,7 +40,7 @@ star_counts_m <- star_counts_filt |>
     select(-Geneid) |>
     as.matrix()
 rownames(star_counts_m) <- star_counts_filt$Geneid
-write.csv(star_counts_m, "count_matrices_reduced/star_counts_m.csv")
+write.csv(star_counts_m, "count_matrices_reduced/star_counts_m.csv") # not working
 
 star_dists <- dist(t(star_counts_m))
 
@@ -61,14 +61,15 @@ star_pca_fit <- t(log10(star_counts_m + 1)) |>
 
 
 # age starts here: fix below
-star_pca_fit |>
-  augment(t(star_counts_m)) |>
-  dplyr::rename(sample = .rownames) |>
-  separate(sample, into = c('tissue', 'age'), sep = '_') |>
-  mutate(age = str_remove(age, '[0-9]')) |>
-  ggplot(aes(.fittedPC1, .fittedPC2, color = tissue, shape = age)) + 
-  geom_point(size = 4)
-ggsave("plots_reduced/star_pca_fit.png")
+star_pca_plot <- star_pca_fit |>
+    augment(t(star_counts_m)) |>
+    dplyr::rename(sample = .rownames) |>
+    #separate(sample, into = c('tissue', 'age'), sep = '_') |>
+    #mutate(age = str_remove(age, '[0-9]')) |>
+    mutate(sample = str_remove(sample, '_[0-9]')) |>
+    ggplot(aes(.fittedPC1, .fittedPC2, color = sample)) + 
+    geom_point(size = 5)
+ggsave("notebook/plots_reduced/star_pca_fit.png")
 
 star_metadata <- data.frame(sample_id = colnames(star_counts_m)) |>
     mutate(tissue = str_sub(sample_id, 1, 3),

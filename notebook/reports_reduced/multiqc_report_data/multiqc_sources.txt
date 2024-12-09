@@ -1,5 +1,6 @@
 Module	Section	Sample Name	Source
-featureCounts	all_sections	counting_reduced | counts_reduced | hisat	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/star_counts.tsv.summary
+featureCounts	all_sections	counting_reduced | counts_reduced | star	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/star_counts.tsv.summary
+featureCounts	all_sections	counting_reduced | counts_reduced | hisat	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/hisat_counts.tsv.summary
 Picard	DuplicationMetrics	counting_reduced | logs_reduced |	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/logs_reduced/star_duplicates
 Picard	DuplicationMetrics	counting_reduced | logs_reduced | merged	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/logs_reduced/hisat_duplicates
 STAR	SummaryLog	alignment_reduced | star |	/data/users/corwinbm5021/Sm_Mira_IvT/notebook/alignment_reduced/star/Log.final.out

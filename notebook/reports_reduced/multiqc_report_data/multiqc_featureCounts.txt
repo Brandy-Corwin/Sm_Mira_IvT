@@ -1,2 +1,3 @@
-Sample	Unassigned_NoFeatures	Total	Unassigned_Duplicate	Unassigned_Unmapped	percent_assigned	Unassigned_FragmentLength	Assigned	Unassigned_Read_Type	Unassigned_Overlapping_Length	Unassigned_MappingQuality	Unassigned_MultiMapping	Unassigned_Singleton	Unassigned_NonSplit	Unassigned_Ambiguity	Unassigned_Secondary	Unassigned_Chimera
-counting_reduced | counts_reduced | hisat	20263136	43797132	1582768	21909121	0.0957939437678248	0	41955	0	0	0	0	0	0	152	0	0
+Sample	Assigned	Unassigned_Duplicate	Unassigned_Singleton	Unassigned_FragmentLength	Unassigned_MultiMapping	Unassigned_MappingQuality	Unassigned_Chimera	Unassigned_Ambiguity	Unassigned_Overlapping_Length	Unassigned_Read_Type	Total	percent_assigned	Unassigned_NoFeatures	Unassigned_Secondary	Unassigned_NonSplit	Unassigned_Unmapped
+counting_reduced | counts_reduced | hisat	41955	1582768	0	0	0	0	0	152	0	0	43797132	0.0957939437678248	20263136	0	0	21909121
+counting_reduced | counts_reduced | star	22633	575423	0	0	0	0	0	311	0	0	26730682	0.08467049213334699	1747347	0	0	24384968

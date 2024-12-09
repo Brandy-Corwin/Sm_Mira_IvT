@@ -2,7 +2,8 @@
     "report_data_sources": {
         "featureCounts": {
             "all_sections": {
-                "counting_reduced | counts_reduced | hisat": "/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/star_counts.tsv.summary"
+                "counting_reduced | counts_reduced | star": "/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/star_counts.tsv.summary",
+                "counting_reduced | counts_reduced | hisat": "/data/users/corwinbm5021/Sm_Mira_IvT/notebook/counting_reduced/counts_reduced/hisat_counts.tsv.summary"
             }
         },
         "Picard": {
@@ -67,6 +68,24 @@
     },
     "report_general_stats_data": [
         {
+            "counting_reduced | counts_reduced | star": {
+                "Total": 26730682,
+                "Assigned": 22633,
+                "Unassigned_Unmapped": 24384968,
+                "Unassigned_Read_Type": 0,
+                "Unassigned_Singleton": 0,
+                "Unassigned_MappingQuality": 0,
+                "Unassigned_Chimera": 0,
+                "Unassigned_FragmentLength": 0,
+                "Unassigned_Duplicate": 575423,
+                "Unassigned_MultiMapping": 0,
+                "Unassigned_Secondary": 0,
+                "Unassigned_NonSplit": 0,
+                "Unassigned_NoFeatures": 1747347,
+                "Unassigned_Overlapping_Length": 0,
+                "Unassigned_Ambiguity": 311,
+                "percent_assigned": 0.08467049213334699
+            },
             "counting_reduced | counts_reduced | hisat": {
                 "Total": 43797132,
                 "Assigned": 41955,
@@ -766,7 +785,8 @@
             "plot_type": "bar_graph",
             "samples": [
                 [
-                    "counting_reduced | counts_reduced | hisat"
+                    "counting_reduced | counts_reduced | hisat",
+                    "counting_reduced | counts_reduced | star"
                 ]
             ],
             "datasets": [
@@ -774,35 +794,40 @@
                     {
                         "name": "Assigned",
                         "data": [
-                            41955.0
+                            41955.0,
+                            22633.0
                         ],
                         "color": "#7cb5ec"
                     },
                     {
                         "name": "Unassigned: Unmapped",
                         "data": [
-                            21909121.0
+                            21909121.0,
+                            24384968.0
                         ],
                         "color": "#434348"
                     },
                     {
                         "name": "Unassigned: Duplicate",
                         "data": [
-                            1582768.0
+                            1582768.0,
+                            575423.0
                         ],
                         "color": "#90ed7d"
                     },
                     {
                         "name": "Unassigned: No Features",
                         "data": [
-                            20263136.0
+                            20263136.0,
+                            1747347.0
                         ],
                         "color": "#f7a35c"
                     },
                     {
                         "name": "Unassigned: Ambiguity",
                         "data": [
-                            152.0
+                            152.0,
+                            311.0
                         ],
                         "color": "#8085e9"
                     }
@@ -61937,6 +61962,24 @@
     },
     "report_saved_raw_data": {
         "multiqc_featureCounts": {
+            "counting_reduced | counts_reduced | star": {
+                "Total": 26730682,
+                "Assigned": 22633,
+                "Unassigned_Unmapped": 24384968,
+                "Unassigned_Read_Type": 0,
+                "Unassigned_Singleton": 0,
+                "Unassigned_MappingQuality": 0,
+                "Unassigned_Chimera": 0,
+                "Unassigned_FragmentLength": 0,
+                "Unassigned_Duplicate": 575423,
+                "Unassigned_MultiMapping": 0,
+                "Unassigned_Secondary": 0,
+                "Unassigned_NonSplit": 0,
+                "Unassigned_NoFeatures": 1747347,
+                "Unassigned_Overlapping_Length": 0,
+                "Unassigned_Ambiguity": 311,
+                "percent_assigned": 0.08467049213334699
+            },
             "counting_reduced | counts_reduced | hisat": {
                 "Total": 43797132,
                 "Assigned": 41955,
@@ -62898,6 +62941,10 @@
             }
         },
         "multiqc_general_stats": {
+            "counting_reduced | counts_reduced | star": {
+                "featureCounts_mqc-generalstats-featurecounts-percent_assigned": 0.08467049213334699,
+                "featureCounts_mqc-generalstats-featurecounts-Assigned": 22633
+            },
             "counting_reduced | counts_reduced | hisat": {
                 "featureCounts_mqc-generalstats-featurecounts-percent_assigned": 0.0957939437678248,
                 "featureCounts_mqc-generalstats-featurecounts-Assigned": 41955
@@ -63206,7 +63253,7 @@
         "alignment_reduced/",
         "counting_reduced/"
     ],
-    "config_creation_date": "2024-12-08, 13:47 CST",
+    "config_creation_date": "2024-12-09, 09:25 CST",
     "config_git_hash": null,
     "config_intro_text": null,
     "config_report_comment": null,
