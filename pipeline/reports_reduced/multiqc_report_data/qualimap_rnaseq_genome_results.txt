@@ -1,3 +1,3 @@
-Sample	reads_aligned	bam_file	reads_aligned_exonic	reads_aligned_genes	not_aligned	non_unique_alignments	5_3_bias	reads_aligned_intergenic	ambiguous_alignments	total_alignments	reads_aligned_intronic	reads_aligned_overlapping_exon
-qualimap_reduced | hisat | rnaseq | merged	53991400.0	alignment_reduced/hisat/merged.bam	10378952.0	10378952.0	195017628.0	364189717.0	1.74	2849380.0	11187.0	378916294.0	1487058.0	477386.0
-qualimap_reduced | star | rnaseq |	11733562.0	alignment_reduced/star/Aligned.sortedByCoord.out.bam	7156722.0	7156722.0	237275466.0	5406450.0	1.68	1510381.0	7551.0	15397899.0	1316795.0	536228.0
+Sample	reads_aligned_overlapping_exon	5_3_bias	reads_aligned	reads_aligned_genes	total_alignments	ambiguous_alignments	reads_aligned_exonic	not_aligned	reads_aligned_intronic	non_unique_alignments	bam_file	reads_aligned_intergenic
+qualimap_reduced | hisat | rnaseq | merged	477386.0	1.74	53991400.0	10378952.0	378916294.0	11187.0	10378952.0	195017628.0	1487058.0	364189717.0	alignment_reduced/hisat/merged.bam	2849380.0
+qualimap_reduced | star | rnaseq |	536228.0	1.68	11733562.0	7156722.0	15397899.0	7551.0	7156722.0	237275466.0	1316795.0	5406450.0	alignment_reduced/star/Aligned.sortedByCoord.out.bam	1510381.0

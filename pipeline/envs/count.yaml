@@ -4,4 +4,3 @@ channels:
   - defaults
 dependencies:
   - subread=2.0.6
-  # - or bioconductor-rsubread=2.16.1

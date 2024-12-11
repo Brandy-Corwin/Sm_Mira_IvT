@@ -43,46 +43,46 @@
                 "alignment_reduced | hisat | Int-03_S44_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Int-03_S44_L005.log",
                 "alignment_reduced | hisat | Int-04_S45_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Int-04_S45_L005.log",
                 "alignment_reduced | hisat | Liv-01_S38_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Liv-01_S38_L005.log",
-                "alignment_reduced | hisat | Liv-02_S39_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Liv-02_S39_L005.log",
+                "alignment_reduced | hisat | Int-01_S42_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Int-01_S42_L005.log",
                 "alignment_reduced | hisat | Liv-03_S40_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Liv-03_S40_L005.log",
                 "alignment_reduced | hisat | Liv-04_S41_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Liv-04_S41_L005.log",
-                "alignment_reduced | hisat | Int-01_S42_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Int-01_S42_L005.log"
+                "alignment_reduced | hisat | Liv-02_S39_L005": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/alignment_reduced/hisat/Liv-02_S39_L005.log"
             }
         },
         "FastQC": {
             "all_sections": {
-                "fastq_reduced | qc | Int-03_S44_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-03_S44_L005_R1_001_fastqc.zip",
-                "fastq_reduced | qc | Int-03_S44_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-03_S44_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-03_S40_L005_R1_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-03_S40_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-01_S38_L005_R1_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-01_S38_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-02_S39_L005_R1_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-02_S39_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-04_S41_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-04_S41_L005_R1_001_fastqc.zip",
                 "fastq_reduced | qc | Int-01_S42_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-01_S42_L005_R1_001_fastqc.zip",
                 "fastq_reduced | qc | Int-01_S42_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-01_S42_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-02_S39_L005_R1_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-02_S39_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Int-04_S45_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-04_S45_L005_R1_001_fastqc.zip",
+                "fastq_reduced | qc | Int-04_S45_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-04_S45_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-03_S40_L005_R1_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-03_S40_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-01_S38_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-01_S38_L005_R1_001_fastqc.zip",
+                "fastq_reduced | qc | Int-03_S44_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-03_S44_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Int-03_S44_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-03_S44_L005_R1_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-04_S41_L005_R2_001_fastqc.zip",
+                "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Liv-04_S41_L005_R1_001_fastqc.zip",
                 "fastq_reduced | qc | Int-02_S43_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-02_S43_L005_R2_001_fastqc.zip",
                 "fastq_reduced | qc | Int-02_S43_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-02_S43_L005_R1_001_fastqc.zip",
-                "fastq_reduced | qc | Int-04_S45_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-04_S45_L005_R2_001_fastqc.zip",
-                "fastq_reduced | qc | Int-04_S45_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/fastq_reduced/qc/Int-04_S45_L005_R1_001_fastqc.zip",
+                "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-04_S45_L005_R1_001_fastqc.zip",
+                "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-04_S45_L005_R2_001_fastqc.zip",
                 "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-01_S38_L005_R1_001_fastqc.zip",
                 "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-01_S38_L005_R2_001_fastqc.zip",
                 "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-02_S39_L005_R1_001_fastqc.zip",
                 "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-02_S39_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-03_S40_L005_R1_001_fastqc.zip",
-                "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-03_S40_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-01_S42_L005_R1_001_fastqc.zip",
-                "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-01_S42_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-04_S41_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-04_S41_L005_R1_001_fastqc.zip",
-                "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-04_S45_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-04_S45_L005_R1_001_fastqc.zip",
                 "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-02_S43_L005_R1_001_fastqc.zip",
                 "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-02_S43_L005_R2_001_fastqc.zip",
+                "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-03_S44_L005_R1_001_fastqc.zip",
                 "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-03_S44_L005_R2_001_fastqc.zip",
-                "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-03_S44_L005_R1_001_fastqc.zip"
+                "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-03_S40_L005_R2_001_fastqc.zip",
+                "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-03_S40_L005_R1_001_fastqc.zip",
+                "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-01_S42_L005_R1_001_fastqc.zip",
+                "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Int-01_S42_L005_R2_001_fastqc.zip",
+                "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-04_S41_L005_R1_001_fastqc.zip",
+                "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/trimmed_reduced/qc/Liv-04_S41_L005_R2_001_fastqc.zip"
             }
         }
     },
@@ -121,7 +121,7 @@
             "qualimap_reduced | hisat | bam | raw_data_qualimapReport | bam": {
                 "median_coverage": 0,
                 "median_insert_size": 196,
-                "avg_gc": 40.352032629917424,
+                "avg_gc": 40.35203208637536,
                 "1_x_pc": 34.13213052148422,
                 "5_x_pc": 11.744968977090531,
                 "10_x_pc": 7.208297095118572,
@@ -254,17 +254,17 @@
                 "unpaired_aligned_multi": 58682.0,
                 "overall_alignment_rate": 9.14
             },
-            "alignment_reduced | hisat | Liv-02_S39_L005": {
-                "paired_total": 13632626,
-                "paired_aligned_none": 7133251,
-                "paired_aligned_one": 1094900,
-                "paired_aligned_multi": 4924367,
-                "paired_aligned_discord_one": 480108,
-                "unpaired_total": 7133251.0,
-                "unpaired_aligned_none": 6907286.0,
-                "unpaired_aligned_one": 104700.5,
-                "unpaired_aligned_multi": 121264.5,
-                "overall_alignment_rate": 49.33
+            "alignment_reduced | hisat | Int-01_S42_L005": {
+                "paired_total": 12168802,
+                "paired_aligned_none": 4399339,
+                "paired_aligned_one": 1101029,
+                "paired_aligned_multi": 6353001,
+                "paired_aligned_discord_one": 315433,
+                "unpaired_total": 4399339.0,
+                "unpaired_aligned_none": 4222140.0,
+                "unpaired_aligned_one": 65915.5,
+                "unpaired_aligned_multi": 111283.5,
+                "overall_alignment_rate": 65.3
             },
             "alignment_reduced | hisat | Liv-03_S40_L005": {
                 "paired_total": 20186446,
@@ -290,34 +290,66 @@
                 "unpaired_aligned_multi": 35540.5,
                 "overall_alignment_rate": 16.48
             },
-            "alignment_reduced | hisat | Int-01_S42_L005": {
-                "paired_total": 12168802,
-                "paired_aligned_none": 4399339,
-                "paired_aligned_one": 1101029,
-                "paired_aligned_multi": 6353001,
-                "paired_aligned_discord_one": 315433,
-                "unpaired_total": 4399339.0,
-                "unpaired_aligned_none": 4222140.0,
-                "unpaired_aligned_one": 65915.5,
-                "unpaired_aligned_multi": 111283.5,
-                "overall_alignment_rate": 65.3
+            "alignment_reduced | hisat | Liv-02_S39_L005": {
+                "paired_total": 13632626,
+                "paired_aligned_none": 7133251,
+                "paired_aligned_one": 1094900,
+                "paired_aligned_multi": 4924367,
+                "paired_aligned_discord_one": 480108,
+                "unpaired_total": 7133251.0,
+                "unpaired_aligned_none": 6907286.0,
+                "unpaired_aligned_one": 104700.5,
+                "unpaired_aligned_multi": 121264.5,
+                "overall_alignment_rate": 49.33
             }
         },
         {
-            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
+            "fastq_reduced | qc | Int-01_S42_L005_R1_001": {
                 "percent_gc": 49.0,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
-                "total_sequences": 13521806.0,
-                "percent_duplicates": 56.984115785930044,
+                "total_sequences": 12421987.0,
+                "percent_duplicates": 73.15821097531398,
                 "percent_fails": 36.36363636363637
             },
-            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
+            "fastq_reduced | qc | Int-01_S42_L005_R2_001": {
                 "percent_gc": 50.0,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
-                "total_sequences": 13521806.0,
-                "percent_duplicates": 60.480094805253145,
+                "total_sequences": 12421987.0,
+                "percent_duplicates": 74.4516759037079,
+                "percent_fails": 45.45454545454545
+            },
+            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
+                "percent_gc": 52.0,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "total_sequences": 14755790.0,
+                "percent_duplicates": 76.03564103010457,
+                "percent_fails": 36.36363636363637
+            },
+            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
+                "percent_gc": 53.0,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "total_sequences": 14755790.0,
+                "percent_duplicates": 77.04462386226162,
+                "percent_fails": 54.54545454545454
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
+                "percent_gc": 49.0,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "total_sequences": 17961443.0,
+                "percent_duplicates": 58.44512738901909,
+                "percent_fails": 36.36363636363637
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
+                "percent_gc": 50.0,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "total_sequences": 17961443.0,
+                "percent_duplicates": 62.028688620825605,
                 "percent_fails": 45.45454545454545
             },
             "fastq_reduced | qc | Liv-03_S40_L005_R1_001": {
@@ -336,14 +368,6 @@
                 "percent_duplicates": 61.94559077039338,
                 "percent_fails": 54.54545454545454
             },
-            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
-                "percent_gc": 49.0,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "total_sequences": 20176743.0,
-                "percent_duplicates": 60.54877132695965,
-                "percent_fails": 45.45454545454545
-            },
             "fastq_reduced | qc | Liv-01_S38_L005_R2_001": {
                 "percent_gc": 50.0,
                 "avg_sequence_length": 151.0,
@@ -352,21 +376,29 @@
                 "percent_duplicates": 64.06773166971985,
                 "percent_fails": 54.54545454545454
             },
-            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
-                "percent_gc": 52.0,
+            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
+                "percent_gc": 49.0,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
-                "total_sequences": 14755790.0,
-                "percent_duplicates": 76.03564103010457,
-                "percent_fails": 36.36363636363637
+                "total_sequences": 20176743.0,
+                "percent_duplicates": 60.54877132695965,
+                "percent_fails": 45.45454545454545
             },
-            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
-                "percent_gc": 53.0,
+            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
+                "percent_gc": 50.0,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
-                "total_sequences": 14755790.0,
-                "percent_duplicates": 77.04462386226162,
-                "percent_fails": 54.54545454545454
+                "total_sequences": 13521806.0,
+                "percent_duplicates": 60.480094805253145,
+                "percent_fails": 45.45454545454545
+            },
+            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
+                "percent_gc": 49.0,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "total_sequences": 13521806.0,
+                "percent_duplicates": 56.984115785930044,
+                "percent_fails": 36.36363636363637
             },
             "fastq_reduced | qc | Liv-04_S41_L005_R2_001": {
                 "percent_gc": 49.0,
@@ -384,22 +416,6 @@
                 "percent_duplicates": 57.4439038274358,
                 "percent_fails": 36.36363636363637
             },
-            "fastq_reduced | qc | Int-01_S42_L005_R1_001": {
-                "percent_gc": 49.0,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "total_sequences": 12421987.0,
-                "percent_duplicates": 73.15821097531398,
-                "percent_fails": 36.36363636363637
-            },
-            "fastq_reduced | qc | Int-01_S42_L005_R2_001": {
-                "percent_gc": 50.0,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "total_sequences": 12421987.0,
-                "percent_duplicates": 74.4516759037079,
-                "percent_fails": 45.45454545454545
-            },
             "fastq_reduced | qc | Int-02_S43_L005_R2_001": {
                 "percent_gc": 51.0,
                 "avg_sequence_length": 151.0,
@@ -416,21 +432,21 @@
                 "percent_duplicates": 68.19962108276289,
                 "percent_fails": 45.45454545454545
             },
-            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
-                "percent_gc": 50.0,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "total_sequences": 17961443.0,
-                "percent_duplicates": 62.028688620825605,
-                "percent_fails": 45.45454545454545
+            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
+                "percent_gc": 47.0,
+                "avg_sequence_length": 131.75306347604192,
+                "median_sequence_length": 141,
+                "total_sequences": 17401148.0,
+                "percent_duplicates": 62.04374445901256,
+                "percent_fails": 27.27272727272727
             },
-            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
-                "percent_gc": 49.0,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "total_sequences": 17961443.0,
-                "percent_duplicates": 58.44512738901909,
-                "percent_fails": 36.36363636363637
+            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
+                "percent_gc": 48.0,
+                "avg_sequence_length": 131.98175706568324,
+                "median_sequence_length": 141,
+                "total_sequences": 17401148.0,
+                "percent_duplicates": 62.07456567008937,
+                "percent_fails": 27.27272727272727
             },
             "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": {
                 "percent_gc": 48.0,
@@ -464,12 +480,36 @@
                 "percent_duplicates": 75.83992652159398,
                 "percent_fails": 18.181818181818183
             },
-            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
+            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
                 "percent_gc": 48.0,
-                "avg_sequence_length": 136.56298017986921,
+                "avg_sequence_length": 135.46629941349286,
                 "median_sequence_length": 141,
-                "total_sequences": 20186446.0,
-                "percent_duplicates": 63.355774806427874,
+                "total_sequences": 15058640.0,
+                "percent_duplicates": 70.25897137863676,
+                "percent_fails": 36.36363636363637
+            },
+            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
+                "percent_gc": 49.0,
+                "avg_sequence_length": 135.60721027928153,
+                "median_sequence_length": 141,
+                "total_sequences": 15058640.0,
+                "percent_duplicates": 70.07323530395223,
+                "percent_fails": 27.27272727272727
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
+                "percent_gc": 48.0,
+                "avg_sequence_length": 135.0693586982577,
+                "median_sequence_length": 141,
+                "total_sequences": 13203535.0,
+                "percent_duplicates": 60.98025268960878,
+                "percent_fails": 27.27272727272727
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
+                "percent_gc": 48.0,
+                "avg_sequence_length": 135.22958298667743,
+                "median_sequence_length": 141,
+                "total_sequences": 13203535.0,
+                "percent_duplicates": 60.65701958347072,
                 "percent_fails": 27.27272727272727
             },
             "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": {
@@ -479,6 +519,14 @@
                 "total_sequences": 20186446.0,
                 "percent_duplicates": 62.564811130007506,
                 "percent_fails": 36.36363636363637
+            },
+            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
+                "percent_gc": 48.0,
+                "avg_sequence_length": 136.56298017986921,
+                "median_sequence_length": 141,
+                "total_sequences": 20186446.0,
+                "percent_duplicates": 63.355774806427874,
+                "percent_fails": 27.27272727272727
             },
             "trimmed_reduced | qc | Int-01_S42_L005_R1_001": {
                 "percent_gc": 48.0,
@@ -496,14 +544,6 @@
                 "percent_duplicates": 74.79063887834909,
                 "percent_fails": 18.181818181818183
             },
-            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
-                "percent_gc": 48.0,
-                "avg_sequence_length": 134.36751489439175,
-                "median_sequence_length": 141,
-                "total_sequences": 13116682.0,
-                "percent_duplicates": 60.55069731170772,
-                "percent_fails": 27.27272727272727
-            },
             "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": {
                 "percent_gc": 47.0,
                 "avg_sequence_length": 134.17092668709967,
@@ -512,52 +552,12 @@
                 "percent_duplicates": 60.73333761116651,
                 "percent_fails": 27.27272727272727
             },
-            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
+            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
                 "percent_gc": 48.0,
-                "avg_sequence_length": 131.98175706568324,
+                "avg_sequence_length": 134.36751489439175,
                 "median_sequence_length": 141,
-                "total_sequences": 17401148.0,
-                "percent_duplicates": 62.07456567008937,
-                "percent_fails": 27.27272727272727
-            },
-            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
-                "percent_gc": 47.0,
-                "avg_sequence_length": 131.75306347604192,
-                "median_sequence_length": 141,
-                "total_sequences": 17401148.0,
-                "percent_duplicates": 62.04374445901256,
-                "percent_fails": 27.27272727272727
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
-                "percent_gc": 48.0,
-                "avg_sequence_length": 135.46629941349286,
-                "median_sequence_length": 141,
-                "total_sequences": 15058640.0,
-                "percent_duplicates": 70.25897137863676,
-                "percent_fails": 36.36363636363637
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
-                "percent_gc": 49.0,
-                "avg_sequence_length": 135.60721027928153,
-                "median_sequence_length": 141,
-                "total_sequences": 15058640.0,
-                "percent_duplicates": 70.07323530395223,
-                "percent_fails": 27.27272727272727
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
-                "percent_gc": 48.0,
-                "avg_sequence_length": 135.22958298667743,
-                "median_sequence_length": 141,
-                "total_sequences": 13203535.0,
-                "percent_duplicates": 60.65701958347072,
-                "percent_fails": 27.27272727272727
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
-                "percent_gc": 48.0,
-                "avg_sequence_length": 135.0693586982577,
-                "median_sequence_length": 141,
-                "total_sequences": 13203535.0,
-                "percent_duplicates": 60.98025268960878,
+                "total_sequences": 13116682.0,
+                "percent_duplicates": 60.55069731170772,
                 "percent_fails": 27.27272727272727
             }
         }
@@ -1174,7 +1174,7 @@
             }
         }
     ],
-    "report_multiqc_command": "/data/users/corwinbm5021/.conda/envs/biol343_project/bin/multiqc --force -d fastq_reduced/qc trimmed_reduced/qc alignment_reduced/star/ alignment_reduced/hisat/ qualimap_reduced counting_reduced/counts/ -n reports_reduced/multiqc_report.html",
+    "report_multiqc_command": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/.snakemake/conda/58eba4106198147f0e9a97992cdea376_/bin/multiqc --force -d fastq_reduced/qc trimmed_reduced/qc alignment_reduced/star/ alignment_reduced/hisat/ qualimap_reduced counting_reduced/counts/ -n reports_reduced/multiqc_report.html",
     "report_plot_data": {
         "qualimap_coverage_histogram": {
             "plot_type": "xy_line",
@@ -24810,11 +24810,11 @@
                             ],
                             [
                                 21,
-                                0.0008865171128784684
+                                0.0008859735708104864
                             ],
                             [
                                 22,
-                                0.0015572480247681248
+                                0.001557791566836107
                             ],
                             [
                                 23,
@@ -24822,79 +24822,79 @@
                             ],
                             [
                                 24,
-                                0.004025472555473903
+                                0.0040260160975418855
                             ],
                             [
                                 25,
-                                0.006644258239010666
+                                0.006643714696942684
                             ],
                             [
                                 26,
-                                0.0073611902266787835
+                                0.007361733768746766
                             ],
                             [
                                 27,
-                                0.011283389789236127
+                                0.011283389789236126
                             ],
                             [
                                 28,
-                                0.014009796802233307
+                                0.014010340344301285
                             ],
                             [
                                 29,
-                                0.01762543863844886
+                                0.01762217738604097
                             ],
                             [
                                 30,
-                                0.021829736534288807
+                                0.021831910702560735
                             ],
                             [
                                 31,
-                                0.025670948328716848
+                                0.025670404786648865
                             ],
                             [
                                 32,
-                                0.02975294925926087
+                                0.029752949259260867
                             ],
                             [
                                 33,
-                                0.03259567427480617
+                                0.032595674274806176
                             ],
                             [
                                 34,
-                                0.0366716962426024
+                                0.03667223978467037
                             ],
                             [
                                 35,
-                                0.0399372969870376
+                                0.03993675344496963
                             ],
                             [
                                 36,
-                                0.04395570349562775
+                                0.04395787766389968
                             ],
                             [
                                 37,
-                                0.047767564018384764
+                                0.047767020476316785
                             ],
                             [
                                 38,
-                                0.04985367847529928
+                                0.04985367847529927
                             ],
                             [
                                 39,
-                                0.053418770899192516
+                                0.05341714027298857
                             ],
                             [
                                 40,
-                                0.05592504337465702
+                                0.055924499832589035
                             ],
                             [
                                 41,
-                                0.056797971935835946
+                                0.05679960256203989
                             ],
                             [
                                 42,
-                                0.058053554112874106
+                                0.05805355411287411
                             ],
                             [
                                 43,
@@ -24906,55 +24906,55 @@
                             ],
                             [
                                 45,
-                                0.04706313349828024
+                                0.047061502872076284
                             ],
                             [
                                 46,
-                                0.04103090362781718
+                                0.041032534254021126
                             ],
                             [
                                 47,
-                                0.0356117892100377
+                                0.03561233275210569
                             ],
                             [
                                 48,
-                                0.0283261513308084
+                                0.028323977162536467
                             ],
                             [
                                 49,
-                                0.024426780535106295
+                                0.024428954703378226
                             ],
                             [
                                 50,
-                                0.02024639849025755
+                                0.020244767864053603
                             ],
                             [
                                 51,
-                                0.015784461654194188
+                                0.01578500519626217
                             ],
                             [
                                 52,
-                                0.01006096367834485
+                                0.010061507220412831
                             ],
                             [
                                 53,
-                                0.012322642223217509
+                                0.012322098681149527
                             ],
                             [
                                 54,
-                                0.010808334021819951
+                                0.010807790479751972
                             ],
                             [
                                 55,
-                                0.007891687285029111
+                                0.00789114374296113
                             ],
                             [
                                 56,
-                                0.010343605553695434
+                                0.010344149095763417
                             ],
                             [
                                 57,
-                                0.004256477934366208
+                                0.0042570214764341896
                             ],
                             [
                                 58,
@@ -24962,7 +24962,7 @@
                             ],
                             [
                                 59,
-                                0.0016029055584786042
+                                0.0016029055584786038
                             ],
                             [
                                 60,
@@ -32537,38 +32537,38 @@
                 "xDecimals": false,
                 "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}",
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c"
                 },
                 "yPlotBands": [
                     {
@@ -36392,38 +36392,38 @@
                 "xmin": 0,
                 "xDecimals": false,
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c"
                 },
                 "tt_label": "<b>Phred {point.x}</b>: {point.y} reads",
                 "xPlotBands": [
@@ -62704,38 +62704,38 @@
                 "yDecimals": false,
                 "tt_label": "<b>{point.x}% GC</b>: {point.y}",
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#f0ad4e",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#f0ad4e",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#d9534f",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f"
                 },
                 "data_labels": [
                     {
@@ -67694,38 +67694,38 @@
                 "xmin": 0,
                 "xDecimals": false,
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c"
                 },
                 "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}%",
                 "yPlotBands": [
@@ -69618,38 +69618,38 @@
                 "yMinTickInterval": 0.1,
                 "xDecimals": false,
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#5cb85c",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#5cb85c",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#5cb85c",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#5cb85c",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#f0ad4e",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#f0ad4e",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#f0ad4e",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#f0ad4e",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#f0ad4e",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#f0ad4e",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#f0ad4e",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#f0ad4e",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#f0ad4e"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#f0ad4e",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#f0ad4e"
                 },
                 "tt_label": "<b>{point.x} bp</b>: {point.y}"
             }
@@ -70392,38 +70392,38 @@
                 "yMinTickInterval": 0.1,
                 "yLabelFormat": "{value:.0f}%",
                 "colors": {
-                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-01_S42_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-02_S39_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
+                    "fastq_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
                     "fastq_reduced | qc | Int-02_S43_L005_R2_001": "#d9534f",
                     "fastq_reduced | qc | Int-02_S43_L005_R1_001": "#d9534f",
-                    "fastq_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
-                    "fastq_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-01_S38_L005_R2_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Liv-02_S39_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-04_S45_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-02_S43_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-02_S43_L005_R2_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f",
                     "trimmed_reduced | qc | Int-03_S44_L005_R2_001": "#d9534f",
-                    "trimmed_reduced | qc | Int-03_S44_L005_R1_001": "#d9534f"
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": "#d9534f",
+                    "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Int-01_S42_L005_R2_001": "#d9534f",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": "#d9534f",
+                    "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": "#d9534f"
                 },
                 "tt_decimals": 2,
                 "tt_suffix": "%"
@@ -88745,17 +88745,17 @@
                 "unpaired_aligned_multi": 58682.0,
                 "overall_alignment_rate": 9.14
             },
-            "alignment_reduced | hisat | Liv-02_S39_L005": {
-                "paired_total": 13632626,
-                "paired_aligned_none": 7133251,
-                "paired_aligned_one": 1094900,
-                "paired_aligned_multi": 4924367,
-                "paired_aligned_discord_one": 480108,
-                "unpaired_total": 7133251.0,
-                "unpaired_aligned_none": 6907286.0,
-                "unpaired_aligned_one": 104700.5,
-                "unpaired_aligned_multi": 121264.5,
-                "overall_alignment_rate": 49.33
+            "alignment_reduced | hisat | Int-01_S42_L005": {
+                "paired_total": 12168802,
+                "paired_aligned_none": 4399339,
+                "paired_aligned_one": 1101029,
+                "paired_aligned_multi": 6353001,
+                "paired_aligned_discord_one": 315433,
+                "unpaired_total": 4399339.0,
+                "unpaired_aligned_none": 4222140.0,
+                "unpaired_aligned_one": 65915.5,
+                "unpaired_aligned_multi": 111283.5,
+                "overall_alignment_rate": 65.3
             },
             "alignment_reduced | hisat | Liv-03_S40_L005": {
                 "paired_total": 20186446,
@@ -88781,30 +88781,30 @@
                 "unpaired_aligned_multi": 35540.5,
                 "overall_alignment_rate": 16.48
             },
-            "alignment_reduced | hisat | Int-01_S42_L005": {
-                "paired_total": 12168802,
-                "paired_aligned_none": 4399339,
-                "paired_aligned_one": 1101029,
-                "paired_aligned_multi": 6353001,
-                "paired_aligned_discord_one": 315433,
-                "unpaired_total": 4399339.0,
-                "unpaired_aligned_none": 4222140.0,
-                "unpaired_aligned_one": 65915.5,
-                "unpaired_aligned_multi": 111283.5,
-                "overall_alignment_rate": 65.3
+            "alignment_reduced | hisat | Liv-02_S39_L005": {
+                "paired_total": 13632626,
+                "paired_aligned_none": 7133251,
+                "paired_aligned_one": 1094900,
+                "paired_aligned_multi": 4924367,
+                "paired_aligned_discord_one": 480108,
+                "unpaired_total": 7133251.0,
+                "unpaired_aligned_none": 6907286.0,
+                "unpaired_aligned_one": 104700.5,
+                "unpaired_aligned_multi": 121264.5,
+                "overall_alignment_rate": 49.33
             }
         },
         "multiqc_fastqc": {
-            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
-                "Filename": "Int-03_S44_L005_R1_001.fastq.gz",
+            "fastq_reduced | qc | Int-01_S42_L005_R1_001": {
+                "Filename": "Int-01_S42_L005_R1_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 13521806.0,
-                "Total Bases": "2 Gbp",
+                "Total Sequences": 12421987.0,
+                "Total Bases": "1.8 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": 151.0,
                 "%GC": 49.0,
-                "total_deduplicated_percentage": 43.015884214069956,
+                "total_deduplicated_percentage": 26.841789024686026,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
                 "basic_statistics": "pass",
@@ -88819,16 +88819,112 @@
                 "overrepresented_sequences": "warn",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
-                "Filename": "Int-03_S44_L005_R2_001.fastq.gz",
+            "fastq_reduced | qc | Int-01_S42_L005_R2_001": {
+                "Filename": "Int-01_S42_L005_R2_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 13521806.0,
-                "Total Bases": "2 Gbp",
+                "Total Sequences": 12421987.0,
+                "Total Bases": "1.8 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": 151.0,
                 "%GC": 50.0,
-                "total_deduplicated_percentage": 39.519905194746855,
+                "total_deduplicated_percentage": 25.548324096292102,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "pass",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "fail",
+                "adapter_content": "fail"
+            },
+            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
+                "Filename": "Liv-02_S39_L005_R1_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 14755790.0,
+                "Total Bases": "2.2 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": 151.0,
+                "%GC": 52.0,
+                "total_deduplicated_percentage": 23.96435896989543,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "warn",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "pass",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "fail",
+                "adapter_content": "fail"
+            },
+            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
+                "Filename": "Liv-02_S39_L005_R2_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 14755790.0,
+                "Total Bases": "2.2 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": 151.0,
+                "%GC": 53.0,
+                "total_deduplicated_percentage": 22.95537613773838,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "fail",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "pass",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "fail",
+                "adapter_content": "fail"
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
+                "Filename": "Int-04_S45_L005_R1_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 17961443.0,
+                "Total Bases": "2.7 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": 151.0,
+                "%GC": 49.0,
+                "total_deduplicated_percentage": 41.55487261098091,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "pass",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "warn",
+                "adapter_content": "fail"
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
+                "Filename": "Int-04_S45_L005_R2_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 17961443.0,
+                "Total Bases": "2.7 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": 151.0,
+                "%GC": 50.0,
+                "total_deduplicated_percentage": 37.971311379174395,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
                 "basic_statistics": "pass",
@@ -88891,30 +88987,6 @@
                 "overrepresented_sequences": "fail",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
-                "Filename": "Liv-01_S38_L005_R1_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 20176743.0,
-                "Total Bases": "3 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": 151.0,
-                "%GC": 49.0,
-                "total_deduplicated_percentage": 39.45122867304035,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "pass",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "fail",
-                "adapter_content": "fail"
-            },
             "fastq_reduced | qc | Liv-01_S38_L005_R2_001": {
                 "Filename": "Liv-01_S38_L005_R2_001.fastq.gz",
                 "File type": "Conventional base calls",
@@ -88939,16 +89011,16 @@
                 "overrepresented_sequences": "fail",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
-                "Filename": "Liv-02_S39_L005_R1_001.fastq.gz",
+            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
+                "Filename": "Liv-01_S38_L005_R1_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 14755790.0,
-                "Total Bases": "2.2 Gbp",
+                "Total Sequences": 20176743.0,
+                "Total Bases": "3 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": 151.0,
-                "%GC": 52.0,
-                "total_deduplicated_percentage": 23.96435896989543,
+                "%GC": 49.0,
+                "total_deduplicated_percentage": 39.45122867304035,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
                 "basic_statistics": "pass",
@@ -88956,35 +89028,59 @@
                 "per_tile_sequence_quality": "fail",
                 "per_sequence_quality_scores": "pass",
                 "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "warn",
+                "per_sequence_gc_content": "fail",
                 "per_base_n_content": "pass",
                 "sequence_length_distribution": "pass",
                 "sequence_duplication_levels": "fail",
                 "overrepresented_sequences": "fail",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
-                "Filename": "Liv-02_S39_L005_R2_001.fastq.gz",
+            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
+                "Filename": "Int-03_S44_L005_R2_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 14755790.0,
-                "Total Bases": "2.2 Gbp",
+                "Total Sequences": 13521806.0,
+                "Total Bases": "2 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": 151.0,
-                "%GC": 53.0,
-                "total_deduplicated_percentage": 22.95537613773838,
+                "%GC": 50.0,
+                "total_deduplicated_percentage": 39.519905194746855,
                 "avg_sequence_length": 151.0,
                 "median_sequence_length": 151,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "fail",
                 "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "fail",
+                "per_base_sequence_content": "warn",
                 "per_sequence_gc_content": "fail",
                 "per_base_n_content": "pass",
                 "sequence_length_distribution": "pass",
                 "sequence_duplication_levels": "fail",
                 "overrepresented_sequences": "fail",
+                "adapter_content": "fail"
+            },
+            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
+                "Filename": "Int-03_S44_L005_R1_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 13521806.0,
+                "Total Bases": "2 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": 151.0,
+                "%GC": 49.0,
+                "total_deduplicated_percentage": 43.015884214069956,
+                "avg_sequence_length": 151.0,
+                "median_sequence_length": 151,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "pass",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "warn",
                 "adapter_content": "fail"
             },
             "fastq_reduced | qc | Liv-04_S41_L005_R2_001": {
@@ -89035,54 +89131,6 @@
                 "overrepresented_sequences": "warn",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Int-01_S42_L005_R1_001": {
-                "Filename": "Int-01_S42_L005_R1_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 12421987.0,
-                "Total Bases": "1.8 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": 151.0,
-                "%GC": 49.0,
-                "total_deduplicated_percentage": 26.841789024686026,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "pass",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "warn",
-                "adapter_content": "fail"
-            },
-            "fastq_reduced | qc | Int-01_S42_L005_R2_001": {
-                "Filename": "Int-01_S42_L005_R2_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 12421987.0,
-                "Total Bases": "1.8 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": 151.0,
-                "%GC": 50.0,
-                "total_deduplicated_percentage": 25.548324096292102,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "pass",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "fail",
-                "adapter_content": "fail"
-            },
             "fastq_reduced | qc | Int-02_S43_L005_R2_001": {
                 "Filename": "Int-02_S43_L005_R2_001.fastq.gz",
                 "File type": "Conventional base calls",
@@ -89131,42 +89179,18 @@
                 "overrepresented_sequences": "fail",
                 "adapter_content": "fail"
             },
-            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
-                "Filename": "Int-04_S45_L005_R2_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 17961443.0,
-                "Total Bases": "2.7 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": 151.0,
-                "%GC": 50.0,
-                "total_deduplicated_percentage": 37.971311379174395,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "pass",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "fail",
-                "adapter_content": "fail"
-            },
-            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
+            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
                 "Filename": "Int-04_S45_L005_R1_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 17961443.0,
-                "Total Bases": "2.7 Gbp",
+                "Total Sequences": 17401148.0,
+                "Total Bases": "2.2 Gbp",
                 "Sequences flagged as poor quality": 0.0,
-                "Sequence length": 151.0,
-                "%GC": 49.0,
-                "total_deduplicated_percentage": 41.55487261098091,
-                "avg_sequence_length": 151.0,
-                "median_sequence_length": 151,
+                "Sequence length": "20-141",
+                "%GC": 47.0,
+                "total_deduplicated_percentage": 37.95625554098744,
+                "avg_sequence_length": 131.75306347604192,
+                "median_sequence_length": 141,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
                 "per_tile_sequence_quality": "fail",
@@ -89174,10 +89198,34 @@
                 "per_base_sequence_content": "warn",
                 "per_sequence_gc_content": "fail",
                 "per_base_n_content": "pass",
-                "sequence_length_distribution": "pass",
+                "sequence_length_distribution": "warn",
                 "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "warn",
-                "adapter_content": "fail"
+                "overrepresented_sequences": "pass",
+                "adapter_content": "pass"
+            },
+            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
+                "Filename": "Int-04_S45_L005_R2_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 17401148.0,
+                "Total Bases": "2.2 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": "20-141",
+                "%GC": 48.0,
+                "total_deduplicated_percentage": 37.92543432991063,
+                "avg_sequence_length": 131.98175706568324,
+                "median_sequence_length": 141,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "warn",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "pass",
+                "adapter_content": "pass"
             },
             "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": {
                 "Filename": "Liv-01_S38_L005_R1_001.fastq.gz",
@@ -89275,17 +89323,89 @@
                 "overrepresented_sequences": "warn",
                 "adapter_content": "pass"
             },
-            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
-                "Filename": "Liv-03_S40_L005_R1_001.fastq.gz",
+            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
+                "Filename": "Int-02_S43_L005_R1_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 20186446.0,
-                "Total Bases": "2.7 Gbp",
+                "Total Sequences": 15058640.0,
+                "Total Bases": "2 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": "20-141",
                 "%GC": 48.0,
-                "total_deduplicated_percentage": 36.644225193572126,
-                "avg_sequence_length": 136.56298017986921,
+                "total_deduplicated_percentage": 29.74102862136324,
+                "avg_sequence_length": 135.46629941349286,
+                "median_sequence_length": 141,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "fail",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "warn",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "pass",
+                "adapter_content": "pass"
+            },
+            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
+                "Filename": "Int-02_S43_L005_R2_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 15058640.0,
+                "Total Bases": "2 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": "20-141",
+                "%GC": 49.0,
+                "total_deduplicated_percentage": 29.926764696047776,
+                "avg_sequence_length": 135.60721027928153,
+                "median_sequence_length": 141,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "warn",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "warn",
+                "adapter_content": "pass"
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
+                "Filename": "Int-03_S44_L005_R1_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 13203535.0,
+                "Total Bases": "1.7 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": "20-141",
+                "%GC": 48.0,
+                "total_deduplicated_percentage": 39.01974731039122,
+                "avg_sequence_length": 135.0693586982577,
+                "median_sequence_length": 141,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "warn",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "pass",
+                "adapter_content": "pass"
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
+                "Filename": "Int-03_S44_L005_R2_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 13203535.0,
+                "Total Bases": "1.7 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": "20-141",
+                "%GC": 48.0,
+                "total_deduplicated_percentage": 39.34298041652928,
+                "avg_sequence_length": 135.22958298667743,
                 "median_sequence_length": 141,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
@@ -89316,6 +89436,30 @@
                 "per_tile_sequence_quality": "fail",
                 "per_sequence_quality_scores": "pass",
                 "per_base_sequence_content": "fail",
+                "per_sequence_gc_content": "fail",
+                "per_base_n_content": "pass",
+                "sequence_length_distribution": "warn",
+                "sequence_duplication_levels": "fail",
+                "overrepresented_sequences": "warn",
+                "adapter_content": "pass"
+            },
+            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
+                "Filename": "Liv-03_S40_L005_R1_001.fastq.gz",
+                "File type": "Conventional base calls",
+                "Encoding": "Sanger / Illumina 1.9",
+                "Total Sequences": 20186446.0,
+                "Total Bases": "2.7 Gbp",
+                "Sequences flagged as poor quality": 0.0,
+                "Sequence length": "20-141",
+                "%GC": 48.0,
+                "total_deduplicated_percentage": 36.644225193572126,
+                "avg_sequence_length": 136.56298017986921,
+                "median_sequence_length": 141,
+                "basic_statistics": "pass",
+                "per_base_sequence_quality": "pass",
+                "per_tile_sequence_quality": "fail",
+                "per_sequence_quality_scores": "pass",
+                "per_base_sequence_content": "warn",
                 "per_sequence_gc_content": "fail",
                 "per_base_n_content": "pass",
                 "sequence_length_distribution": "warn",
@@ -89371,30 +89515,6 @@
                 "overrepresented_sequences": "warn",
                 "adapter_content": "pass"
             },
-            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
-                "Filename": "Liv-04_S41_L005_R2_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 13116682.0,
-                "Total Bases": "1.7 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 48.0,
-                "total_deduplicated_percentage": 39.44930268829228,
-                "avg_sequence_length": 134.36751489439175,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "pass",
-                "adapter_content": "pass"
-            },
             "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": {
                 "Filename": "Liv-04_S41_L005_R1_001.fastq.gz",
                 "File type": "Conventional base calls",
@@ -89419,137 +89539,17 @@
                 "overrepresented_sequences": "pass",
                 "adapter_content": "pass"
             },
-            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
-                "Filename": "Int-04_S45_L005_R2_001.fastq.gz",
+            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
+                "Filename": "Liv-04_S41_L005_R2_001.fastq.gz",
                 "File type": "Conventional base calls",
                 "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 17401148.0,
-                "Total Bases": "2.2 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 48.0,
-                "total_deduplicated_percentage": 37.92543432991063,
-                "avg_sequence_length": 131.98175706568324,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "pass",
-                "adapter_content": "pass"
-            },
-            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
-                "Filename": "Int-04_S45_L005_R1_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 17401148.0,
-                "Total Bases": "2.2 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 47.0,
-                "total_deduplicated_percentage": 37.95625554098744,
-                "avg_sequence_length": 131.75306347604192,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "pass",
-                "adapter_content": "pass"
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
-                "Filename": "Int-02_S43_L005_R1_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 15058640.0,
-                "Total Bases": "2 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 48.0,
-                "total_deduplicated_percentage": 29.74102862136324,
-                "avg_sequence_length": 135.46629941349286,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "fail",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "pass",
-                "adapter_content": "pass"
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
-                "Filename": "Int-02_S43_L005_R2_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 15058640.0,
-                "Total Bases": "2 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 49.0,
-                "total_deduplicated_percentage": 29.926764696047776,
-                "avg_sequence_length": 135.60721027928153,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "warn",
-                "adapter_content": "pass"
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
-                "Filename": "Int-03_S44_L005_R2_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 13203535.0,
+                "Total Sequences": 13116682.0,
                 "Total Bases": "1.7 Gbp",
                 "Sequences flagged as poor quality": 0.0,
                 "Sequence length": "20-141",
                 "%GC": 48.0,
-                "total_deduplicated_percentage": 39.34298041652928,
-                "avg_sequence_length": 135.22958298667743,
-                "median_sequence_length": 141,
-                "basic_statistics": "pass",
-                "per_base_sequence_quality": "pass",
-                "per_tile_sequence_quality": "fail",
-                "per_sequence_quality_scores": "pass",
-                "per_base_sequence_content": "warn",
-                "per_sequence_gc_content": "fail",
-                "per_base_n_content": "pass",
-                "sequence_length_distribution": "warn",
-                "sequence_duplication_levels": "fail",
-                "overrepresented_sequences": "warn",
-                "adapter_content": "pass"
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
-                "Filename": "Int-03_S44_L005_R1_001.fastq.gz",
-                "File type": "Conventional base calls",
-                "Encoding": "Sanger / Illumina 1.9",
-                "Total Sequences": 13203535.0,
-                "Total Bases": "1.7 Gbp",
-                "Sequences flagged as poor quality": 0.0,
-                "Sequence length": "20-141",
-                "%GC": 48.0,
-                "total_deduplicated_percentage": 39.01974731039122,
-                "avg_sequence_length": 135.0693586982577,
+                "total_deduplicated_percentage": 39.44930268829228,
+                "avg_sequence_length": 134.36751489439175,
                 "median_sequence_length": 141,
                 "basic_statistics": "pass",
                 "per_base_sequence_quality": "pass",
@@ -89576,7 +89576,7 @@
                 "QualiMap_mqc-generalstats-qualimap-median_coverage": 0
             },
             "qualimap_reduced | hisat | bam | raw_data_qualimapReport | bam": {
-                "QualiMap_mqc-generalstats-qualimap-avg_gc": 40.352032629917424,
+                "QualiMap_mqc-generalstats-qualimap-avg_gc": 40.35203208637536,
                 "QualiMap_mqc-generalstats-qualimap-median_insert_size": 196,
                 "QualiMap_mqc-generalstats-qualimap-1_x_pc": 34.13213052148422,
                 "QualiMap_mqc-generalstats-qualimap-5_x_pc": 11.744968977090531,
@@ -89637,8 +89637,8 @@
             "alignment_reduced | hisat | Liv-01_S38_L005": {
                 "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 9.14
             },
-            "alignment_reduced | hisat | Liv-02_S39_L005": {
-                "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 49.33
+            "alignment_reduced | hisat | Int-01_S42_L005": {
+                "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 65.3
             },
             "alignment_reduced | hisat | Liv-03_S40_L005": {
                 "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 1.98
@@ -89646,88 +89646,8 @@
             "alignment_reduced | hisat | Liv-04_S41_L005": {
                 "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 16.48
             },
-            "alignment_reduced | hisat | Int-01_S42_L005": {
-                "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 65.3
-            },
-            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 56.984115785930044,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13521806.0
-            },
-            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.480094805253145,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13521806.0
-            },
-            "fastq_reduced | qc | Liv-03_S40_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 58.64546286014226,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 20441278.0
-            },
-            "fastq_reduced | qc | Liv-03_S40_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 61.94559077039338,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 20441278.0
-            },
-            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.54877132695965,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 20176743.0
-            },
-            "fastq_reduced | qc | Liv-01_S38_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 64.06773166971985,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 20176743.0
-            },
-            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.03564103010457,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 52.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 14755790.0
-            },
-            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.04462386226162,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 53.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 14755790.0
-            },
-            "fastq_reduced | qc | Liv-04_S41_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.377076615581636,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13461820.0
-            },
-            "fastq_reduced | qc | Liv-04_S41_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 57.4439038274358,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13461820.0
+            "alignment_reduced | hisat | Liv-02_S39_L005": {
+                "HISAT2_mqc-generalstats-hisat2-overall_alignment_rate": 49.33
             },
             "fastq_reduced | qc | Int-01_S42_L005_R1_001": {
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 73.15821097531398,
@@ -89745,6 +89665,102 @@
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 12421987.0
             },
+            "fastq_reduced | qc | Liv-02_S39_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 76.03564103010457,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 52.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 14755790.0
+            },
+            "fastq_reduced | qc | Liv-02_S39_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 77.04462386226162,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 53.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 14755790.0
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 58.44512738901909,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 17961443.0
+            },
+            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.028688620825605,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 17961443.0
+            },
+            "fastq_reduced | qc | Liv-03_S40_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 58.64546286014226,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20441278.0
+            },
+            "fastq_reduced | qc | Liv-03_S40_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 61.94559077039338,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20441278.0
+            },
+            "fastq_reduced | qc | Liv-01_S38_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 64.06773166971985,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 54.54545454545454,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20176743.0
+            },
+            "fastq_reduced | qc | Liv-01_S38_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.54877132695965,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20176743.0
+            },
+            "fastq_reduced | qc | Int-03_S44_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.480094805253145,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13521806.0
+            },
+            "fastq_reduced | qc | Int-03_S44_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 56.984115785930044,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13521806.0
+            },
+            "fastq_reduced | qc | Liv-04_S41_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.377076615581636,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13461820.0
+            },
+            "fastq_reduced | qc | Liv-04_S41_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 57.4439038274358,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13461820.0
+            },
             "fastq_reduced | qc | Int-02_S43_L005_R2_001": {
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.49757372103419,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 51.0,
@@ -89761,21 +89777,21 @@
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 15738415.0
             },
-            "fastq_reduced | qc | Int-04_S45_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.028688620825605,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 50.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 45.45454545454545,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 17961443.0
+            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.04374445901256,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 47.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 131.75306347604192,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 17401148.0
             },
-            "fastq_reduced | qc | Int-04_S45_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 58.44512738901909,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 151.0,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 151,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 17961443.0
+            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.07456567008937,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 131.98175706568324,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 17401148.0
             },
             "trimmed_reduced | qc | Liv-01_S38_L005_R1_001": {
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 64.72542827388773,
@@ -89809,13 +89825,37 @@
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 13632626.0
             },
-            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 63.355774806427874,
+            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.25897137863676,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 136.56298017986921,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.46629941349286,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 15058640.0
+            },
+            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.07323530395223,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.60721027928153,
                 "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 20186446.0
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 15058640.0
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.98025268960878,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.0693586982577,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13203535.0
+            },
+            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.65701958347072,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.22958298667743,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13203535.0
             },
             "trimmed_reduced | qc | Liv-03_S40_L005_R2_001": {
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.564811130007506,
@@ -89823,6 +89863,14 @@
                 "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 136.63798015757703,
                 "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 20186446.0
+            },
+            "trimmed_reduced | qc | Liv-03_S40_L005_R1_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 63.355774806427874,
+                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 136.56298017986921,
+                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
+                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 20186446.0
             },
             "trimmed_reduced | qc | Int-01_S42_L005_R1_001": {
@@ -89841,14 +89889,6 @@
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 18.181818181818183,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 12168802.0
             },
-            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.55069731170772,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 134.36751489439175,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13116682.0
-            },
             "trimmed_reduced | qc | Liv-04_S41_L005_R1_001": {
                 "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.73333761116651,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 47.0,
@@ -89857,53 +89897,13 @@
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
                 "FastQC_mqc-generalstats-fastqc-total_sequences": 13116682.0
             },
-            "trimmed_reduced | qc | Int-04_S45_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.07456567008937,
+            "trimmed_reduced | qc | Liv-04_S41_L005_R2_001": {
+                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.55069731170772,
                 "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 131.98175706568324,
+                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 134.36751489439175,
                 "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
                 "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 17401148.0
-            },
-            "trimmed_reduced | qc | Int-04_S45_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 62.04374445901256,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 47.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 131.75306347604192,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 17401148.0
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.25897137863676,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.46629941349286,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 36.36363636363637,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 15058640.0
-            },
-            "trimmed_reduced | qc | Int-02_S43_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 70.07323530395223,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 49.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.60721027928153,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 15058640.0
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R2_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.65701958347072,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.22958298667743,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13203535.0
-            },
-            "trimmed_reduced | qc | Int-03_S44_L005_R1_001": {
-                "FastQC_mqc-generalstats-fastqc-percent_duplicates": 60.98025268960878,
-                "FastQC_mqc-generalstats-fastqc-percent_gc": 48.0,
-                "FastQC_mqc-generalstats-fastqc-avg_sequence_length": 135.0693586982577,
-                "FastQC_mqc-generalstats-fastqc-median_sequence_length": 141,
-                "FastQC_mqc-generalstats-fastqc-percent_fails": 27.27272727272727,
-                "FastQC_mqc-generalstats-fastqc-total_sequences": 13203535.0
+                "FastQC_mqc-generalstats-fastqc-total_sequences": 13116682.0
             }
         }
     },
@@ -89923,14 +89923,14 @@
         "qualimap_reduced",
         "counting_reduced/counts/"
     ],
-    "config_creation_date": "2024-12-07, 15:12 CST",
-    "config_git_hash": null,
+    "config_creation_date": "2024-12-11, 09:59 CST",
+    "config_git_hash": "31add887c3cc010c4ba3cf9351236d02d9d06346",
     "config_intro_text": null,
     "config_report_comment": null,
     "config_report_header_info": null,
-    "config_script_path": "/data/users/corwinbm5021/.conda/envs/biol343_project/lib/python3.12/site-packages/multiqc/utils",
+    "config_script_path": "/data/users/corwinbm5021/Sm_Mira_IvT/pipeline/.snakemake/conda/58eba4106198147f0e9a97992cdea376_/lib/python3.13/site-packages/multiqc/utils",
     "config_short_version": "1.17",
     "config_subtitle": null,
     "config_title": null,
-    "config_version": "1.17"
+    "config_version": "1.17 (31add88)"
 }
