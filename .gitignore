@@ -7,13 +7,13 @@ notebook/qualimap/*
 notebook/checkers/*
 notebook/counting/*
 
-notebook/genome_reduced/*
-notebook/fastq_reduced/qc/*
-notebook/trimmed_reduced/*
-notebook/alignment_reduced/*
-notebook/qualimap_reduced/*
-notebook/checkers_reduced/*
-notebook/counting_reduced/*
+notebook_reduced/genome_reduced/*
+notebook_reduced/fastq_reduced/qc/*
+notebook_reduced/trimmed_reduced/*
+notebook_reduced/alignment_reduced/*
+notebook_reduced/qualimap_reduced/*
+notebook_reduced/checkers_reduced/*
+notebook_reduced/counting_reduced/*
 
 **/.snakemake/
 pipeline/genome/*
@@ -24,13 +24,13 @@ pipeline/qualimap/*
 pipeline/checkers/*
 pipeline/counting/*
 
-pipeline/genome_reduced/*
-pipeline/fastq_reduced/qc/*
-pipeline/trimmed_reduced/*
-pipeline/alignment_reduced/*
-pipeline/qualimap_reduced/*
-pipeline/checkers_reduced/*
-pipeline/counting_reduced/*
+pipeline_reduced/genome_reduced/*
+pipeline_reduced/fastq_reduced/qc/*
+pipeline_reduced/trimmed_reduced/*
+pipeline_reduced/alignment_reduced/*
+pipeline_reduced/qualimap_reduced/*
+pipeline_reduced/checkers_reduced/*
+pipeline_reduced/counting_reduced/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
