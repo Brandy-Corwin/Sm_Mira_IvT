@@ -8,8 +8,8 @@ rule all:
 
 rule fastq_qc:
     input:
-        read1 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/{sample}_R1_001.fastq.gz",
-        read2 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/{sample}_R2_001.fastq.gz"
+        read1 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R1_001.fastq.gz",
+        read2 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R2_001.fastq.gz"
     output:
         read1_html="fastq/qc/{sample}_R1_001_fastqc.html",
         read1_zip="fastq/qc/{sample}_R1_001_fastqc.zip",
@@ -26,8 +26,8 @@ rule fastq_qc:
 
 rule trim_filter:
     input:
-        read1 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/{sample}_R1_001.fastq.gz",
-        read2 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/{sample}_R2_001.fastq.gz"
+        read1 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R1_001.fastq.gz",
+        read2 = "/data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/{sample}_R2_001.fastq.gz"
     output:
         read1 = "trimmed/{sample}_R1_001.fastq.gz",
         read2 = "trimmed/{sample}_R2_001.fastq.gz"

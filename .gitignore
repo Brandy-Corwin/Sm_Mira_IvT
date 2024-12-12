@@ -16,6 +16,8 @@ notebook_reduced/checkers_reduced/*
 notebook_reduced/counting_reduced/*
 
 **/.snakemake/
+pipeline/logs/*
+pipeline/SM:
 pipeline/genome/*
 pipeline/fastq/qc/*
 pipeline/trimmed/*

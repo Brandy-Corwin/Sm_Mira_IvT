@@ -21,5 +21,5 @@ keep-going: True
 rerun-incomplete: True
 printshellcmds: True
 scheduler: greedy
-# use-conda: True
-# conda-frontend: mamba
+use-conda: True
+conda-frontend: mamba

@@ -1,0 +1,722 @@
+Using profile ../snakemake-profile/ for setting default command line arguments.
+host: bose.hpc.uwec.edu
+Building DAG of jobs...
+Creating conda environment envs/trim_filter.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/trim_filter.yaml created (location: .snakemake/conda/7128415794ca193a701e21f0f2b8755a_)
+Creating conda environment envs/hisat.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/hisat.yaml created (location: .snakemake/conda/0c675891317b29aa7951af9eeb17df90_)
+Creating conda environment envs/samtools.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/samtools.yaml created (location: .snakemake/conda/b731af5c59ea3332d0ce99bdc7ab9a6b_)
+Creating conda environment envs/picard.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/picard.yaml created (location: .snakemake/conda/400e0707a88f89f6bd4dffd1fa8a8c51_)
+Creating conda environment envs/fastq_qc.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/fastq_qc.yaml created (location: .snakemake/conda/9d3fa6a9f74c7fe10759aac183d1a72e_)
+Creating conda environment envs/count.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/count.yaml created (location: .snakemake/conda/482e7029971d095354917069735c61e7_)
+Creating conda environment envs/r.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/r.yaml created (location: .snakemake/conda/a183a536f772e535f202c9bc0f252df2_)
+Creating conda environment envs/multiqc.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/multiqc.yaml created (location: .snakemake/conda/58eba4106198147f0e9a97992cdea376_)
+Creating conda environment envs/star.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/star.yaml created (location: .snakemake/conda/60a5349aa199babd42d3311ce33ba0ba_)
+Creating conda environment envs/qualimap.yaml...
+Downloading and installing remote packages.
+Environment for /data/users/corwinbm5021/Sm_Mira_IvT/pipeline/envs/qualimap.yaml created (location: .snakemake/conda/554add4694eedfba30319b588d938a66_)
+Using shell: /usr/bin/bash
+Provided remote nodes: 500
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+convert_hisat            8
+count                    1
+diffexp                  1
+fastq_qc                 8
+flagstat                 1
+hisat_align              8
+hisat_index              1
+mark_duplicates          1
+merge_hisat              1
+qualimap                 1
+report                   1
+star_align_first         1
+star_align_second        1
+star_sa                  1
+trim_filter              8
+trim_qc                  8
+total                   52
+
+Select jobs to execute...
+Execute 10 jobs...
+
+[Thu Dec 12 15:56:02 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R2_001.fastq.gz
+    output: trimmed/Liv-03_S40_L005_R1_001.fastq.gz, trimmed/Liv-03_S40_L005_R2_001.fastq.gz
+    jobid: 23
+    reason: Missing output files: trimmed/Liv-03_S40_L005_R2_001.fastq.gz, trimmed/Liv-03_S40_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-03_S40_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=5040, disk_mib=4807, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Liv-03_S40_L005_R1_001.fastq.gz -p trimmed/Liv-03_S40_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R2_001.fastq.gz
+Submitted job 23 with external jobid '111972'.
+
+[Thu Dec 12 15:56:02 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R2_001.fastq.gz
+    output: fastq/qc/Liv-01_S38_L005_R1_001_fastqc.html, fastq/qc/Liv-01_S38_L005_R1_001_fastqc.zip, fastq/qc/Liv-01_S38_L005_R2_001_fastqc.html, fastq/qc/Liv-01_S38_L005_R2_001_fastqc.zip
+    jobid: 6
+    reason: Missing output files: fastq/qc/Liv-01_S38_L005_R2_001_fastqc.html, fastq/qc/Liv-01_S38_L005_R1_001_fastqc.html
+    wildcards: sample=Liv-01_S38_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4846, disk_mib=4622, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 6 with external jobid '111973'.
+
+[Thu Dec 12 15:56:02 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R2_001.fastq.gz
+    output: trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz
+    jobid: 19
+    reason: Missing output files: trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz
+    wildcards: sample=Liv-01_S38_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4846, disk_mib=4622, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Liv-01_S38_L005_R1_001.fastq.gz -p trimmed/Liv-01_S38_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-01_S38_L005_R2_001.fastq.gz
+Submitted job 19 with external jobid '111974'.
+
+[Thu Dec 12 15:56:02 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R2_001.fastq.gz
+    output: fastq/qc/Int-04_S45_L005_R1_001_fastqc.html, fastq/qc/Int-04_S45_L005_R1_001_fastqc.zip, fastq/qc/Int-04_S45_L005_R2_001_fastqc.html, fastq/qc/Int-04_S45_L005_R2_001_fastqc.zip
+    jobid: 5
+    reason: Missing output files: fastq/qc/Int-04_S45_L005_R1_001_fastqc.html, fastq/qc/Int-04_S45_L005_R2_001_fastqc.html
+    wildcards: sample=Int-04_S45_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4365, disk_mib=4163, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 5 with external jobid '111975'.
+
+[Thu Dec 12 15:56:02 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R2_001.fastq.gz
+    output: fastq/qc/Int-03_S44_L005_R1_001_fastqc.html, fastq/qc/Int-03_S44_L005_R1_001_fastqc.zip, fastq/qc/Int-03_S44_L005_R2_001_fastqc.html, fastq/qc/Int-03_S44_L005_R2_001_fastqc.zip
+    jobid: 4
+    reason: Missing output files: fastq/qc/Int-03_S44_L005_R2_001_fastqc.html, fastq/qc/Int-03_S44_L005_R1_001_fastqc.html
+    wildcards: sample=Int-03_S44_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3304, disk_mib=3151, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 4 with external jobid '111976'.
+
+[Thu Dec 12 15:56:02 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R2_001.fastq.gz
+    output: fastq/qc/Int-02_S43_L005_R1_001_fastqc.html, fastq/qc/Int-02_S43_L005_R1_001_fastqc.zip, fastq/qc/Int-02_S43_L005_R2_001_fastqc.html, fastq/qc/Int-02_S43_L005_R2_001_fastqc.zip
+    jobid: 3
+    reason: Missing output files: fastq/qc/Int-02_S43_L005_R1_001_fastqc.html, fastq/qc/Int-02_S43_L005_R2_001_fastqc.html
+    wildcards: sample=Int-02_S43_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3747, disk_mib=3574, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 3 with external jobid '111977'.
+
+[Thu Dec 12 15:56:02 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R2_001.fastq.gz
+    output: trimmed/Int-04_S45_L005_R1_001.fastq.gz, trimmed/Int-04_S45_L005_R2_001.fastq.gz
+    jobid: 17
+    reason: Missing output files: trimmed/Int-04_S45_L005_R2_001.fastq.gz, trimmed/Int-04_S45_L005_R1_001.fastq.gz
+    wildcards: sample=Int-04_S45_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4365, disk_mib=4163, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Int-04_S45_L005_R1_001.fastq.gz -p trimmed/Int-04_S45_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-04_S45_L005_R2_001.fastq.gz
+Submitted job 17 with external jobid '111978'.
+
+[Thu Dec 12 15:56:02 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R2_001.fastq.gz
+    output: trimmed/Int-03_S44_L005_R1_001.fastq.gz, trimmed/Int-03_S44_L005_R2_001.fastq.gz
+    jobid: 15
+    reason: Missing output files: trimmed/Int-03_S44_L005_R2_001.fastq.gz, trimmed/Int-03_S44_L005_R1_001.fastq.gz
+    wildcards: sample=Int-03_S44_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3304, disk_mib=3151, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Int-03_S44_L005_R1_001.fastq.gz -p trimmed/Int-03_S44_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-03_S44_L005_R2_001.fastq.gz
+Submitted job 15 with external jobid '111979'.
+
+[Thu Dec 12 15:56:02 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R2_001.fastq.gz
+    output: fastq/qc/Liv-03_S40_L005_R1_001_fastqc.html, fastq/qc/Liv-03_S40_L005_R1_001_fastqc.zip, fastq/qc/Liv-03_S40_L005_R2_001_fastqc.html, fastq/qc/Liv-03_S40_L005_R2_001_fastqc.zip
+    jobid: 8
+    reason: Missing output files: fastq/qc/Liv-03_S40_L005_R2_001_fastqc.html, fastq/qc/Liv-03_S40_L005_R1_001_fastqc.html
+    wildcards: sample=Liv-03_S40_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=5040, disk_mib=4807, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-03_S40_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 8 with external jobid '111980'.
+
+[Thu Dec 12 15:56:02 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R2_001.fastq.gz
+    output: trimmed/Int-02_S43_L005_R1_001.fastq.gz, trimmed/Int-02_S43_L005_R2_001.fastq.gz
+    jobid: 13
+    reason: Missing output files: trimmed/Int-02_S43_L005_R2_001.fastq.gz, trimmed/Int-02_S43_L005_R1_001.fastq.gz
+    wildcards: sample=Int-02_S43_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3747, disk_mib=3574, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Int-02_S43_L005_R1_001.fastq.gz -p trimmed/Int-02_S43_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-02_S43_L005_R2_001.fastq.gz
+Submitted job 13 with external jobid '111981'.
+[Thu Dec 12 15:57:09 2024]
+Finished job 23.
+1 of 52 steps (2%) done
+Select jobs to execute...
+Execute 9 jobs...
+
+[Thu Dec 12 15:57:09 2024]
+rule hisat_index:
+    input: genome/genome.fa, genome/annotations.gtf
+    output: genome/hisat, genome/hisat/hisat_ss.tsv, genome/hisat/hisat_exons.tsv
+    jobid: 31
+    reason: Missing output files: genome/hisat
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+
+        hisat2_extract_splice_sites.py genome/annotations.gtf > genome/hisat/hisat_ss.tsv
+        hisat2_extract_exons.py genome/annotations.gtf > genome/hisat/hisat_exons.tsv
+        hisat2-build genome/genome.fa genome/hisat/genome -p 16 --ss genome/hisat/hisat_ss.tsv --exon genome/hisat/hisat_exons.tsv
+        
+Submitted job 31 with external jobid '111983'.
+
+[Thu Dec 12 15:57:09 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R2_001.fastq.gz
+    output: fastq/qc/Liv-02_S39_L005_R1_001_fastqc.html, fastq/qc/Liv-02_S39_L005_R1_001_fastqc.zip, fastq/qc/Liv-02_S39_L005_R2_001_fastqc.html, fastq/qc/Liv-02_S39_L005_R2_001_fastqc.zip
+    jobid: 7
+    reason: Missing output files: fastq/qc/Liv-02_S39_L005_R2_001_fastqc.html, fastq/qc/Liv-02_S39_L005_R1_001_fastqc.html
+    wildcards: sample=Liv-02_S39_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3082, disk_mib=2940, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 7 with external jobid '111984'.
+
+[Thu Dec 12 15:57:09 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R2_001.fastq.gz
+    output: trimmed/Int-01_S42_L005_R1_001.fastq.gz, trimmed/Int-01_S42_L005_R2_001.fastq.gz
+    jobid: 11
+    reason: Missing output files: trimmed/Int-01_S42_L005_R2_001.fastq.gz, trimmed/Int-01_S42_L005_R1_001.fastq.gz
+    wildcards: sample=Int-01_S42_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2443, disk_mib=2330, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Int-01_S42_L005_R1_001.fastq.gz -p trimmed/Int-01_S42_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R2_001.fastq.gz
+Submitted job 11 with external jobid '111985'.
+
+[Thu Dec 12 15:57:09 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R2_001.fastq.gz
+    output: trimmed/Liv-02_S39_L005_R1_001.fastq.gz, trimmed/Liv-02_S39_L005_R2_001.fastq.gz
+    jobid: 21
+    reason: Missing output files: trimmed/Liv-02_S39_L005_R2_001.fastq.gz, trimmed/Liv-02_S39_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-02_S39_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3082, disk_mib=2940, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Liv-02_S39_L005_R1_001.fastq.gz -p trimmed/Liv-02_S39_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-02_S39_L005_R2_001.fastq.gz
+Submitted job 21 with external jobid '111986'.
+
+[Thu Dec 12 15:57:09 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R2_001.fastq.gz
+    output: fastq/qc/Int-01_S42_L005_R1_001_fastqc.html, fastq/qc/Int-01_S42_L005_R1_001_fastqc.zip, fastq/qc/Int-01_S42_L005_R2_001_fastqc.html, fastq/qc/Int-01_S42_L005_R2_001_fastqc.zip
+    jobid: 2
+    reason: Missing output files: fastq/qc/Int-01_S42_L005_R1_001_fastqc.html, fastq/qc/Int-01_S42_L005_R2_001_fastqc.html
+    wildcards: sample=Int-01_S42_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2443, disk_mib=2330, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Int-01_S42_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 2 with external jobid '111987'.
+
+[Thu Dec 12 15:57:09 2024]
+rule trim_filter:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R2_001.fastq.gz
+    output: trimmed/Liv-04_S41_L005_R1_001.fastq.gz, trimmed/Liv-04_S41_L005_R2_001.fastq.gz
+    jobid: 25
+    reason: Missing output files: trimmed/Liv-04_S41_L005_R2_001.fastq.gz, trimmed/Liv-04_S41_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-04_S41_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3284, disk_mib=3132, tmpdir=<TBD>, partition=week
+
+cutadapt -j 32 -m 20 -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --nextseq-trim=10 -u 10 -U 10 -o trimmed/Liv-04_S41_L005_R1_001.fastq.gz -p trimmed/Liv-04_S41_L005_R2_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R2_001.fastq.gz
+Submitted job 25 with external jobid '111988'.
+
+[Thu Dec 12 15:57:09 2024]
+rule fastq_qc:
+    input: /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R1_001.fastq.gz, /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R2_001.fastq.gz
+    output: fastq/qc/Liv-04_S41_L005_R1_001_fastqc.html, fastq/qc/Liv-04_S41_L005_R1_001_fastqc.zip, fastq/qc/Liv-04_S41_L005_R2_001_fastqc.html, fastq/qc/Liv-04_S41_L005_R2_001_fastqc.zip
+    jobid: 9
+    reason: Missing output files: fastq/qc/Liv-04_S41_L005_R2_001_fastqc.html, fastq/qc/Liv-04_S41_L005_R1_001_fastqc.html
+    wildcards: sample=Liv-04_S41_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3284, disk_mib=3132, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R1_001.fastq.gz /data/classes/2024/fall/biol343/course_files/20240923_LH00283_0144_B22NMVKLT3/subsample/Liv-04_S41_L005_R2_001.fastq.gz -o fastq/qc
+Submitted job 9 with external jobid '111989'.
+
+[Thu Dec 12 15:57:09 2024]
+rule trim_qc:
+    input: trimmed/Liv-03_S40_L005_R1_001.fastq.gz, trimmed/Liv-03_S40_L005_R2_001.fastq.gz
+    output: trimmed/qc/Liv-03_S40_L005_R1_001_fastqc.html, trimmed/qc/Liv-03_S40_L005_R1_001_fastqc.zip, trimmed/qc/Liv-03_S40_L005_R2_001_fastqc.html, trimmed/qc/Liv-03_S40_L005_R2_001_fastqc.zip
+    jobid: 22
+    reason: Missing output files: trimmed/qc/Liv-03_S40_L005_R2_001_fastqc.html, trimmed/qc/Liv-03_S40_L005_R1_001_fastqc.html; Input files updated by another job: trimmed/Liv-03_S40_L005_R2_001.fastq.gz, trimmed/Liv-03_S40_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-03_S40_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4428, disk_mib=4223, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Liv-03_S40_L005_R1_001.fastq.gz trimmed/Liv-03_S40_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 22 with external jobid '111990'.
+
+[Thu Dec 12 15:57:09 2024]
+rule star_sa:
+    input: genome/genome.fa, genome/annotations.gtf
+    output: genome/star
+    jobid: 28
+    reason: Missing output files: genome/star
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+
+        STAR             --runThreadN 32             --runMode genomeGenerate             --genomeDir genome/star            --genomeFastaFiles genome/genome.fa             --sjdbGTFfile genome/annotations.gtf             --sjdbOverhang 139             --genomeSAindexNbases 13
+        
+Submitted job 28 with external jobid '111991'.
+[Thu Dec 12 15:57:11 2024]
+Finished job 19.
+2 of 52 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:11 2024]
+rule trim_qc:
+    input: trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz
+    output: trimmed/qc/Liv-01_S38_L005_R1_001_fastqc.html, trimmed/qc/Liv-01_S38_L005_R1_001_fastqc.zip, trimmed/qc/Liv-01_S38_L005_R2_001_fastqc.html, trimmed/qc/Liv-01_S38_L005_R2_001_fastqc.zip
+    jobid: 18
+    reason: Missing output files: trimmed/qc/Liv-01_S38_L005_R1_001_fastqc.html, trimmed/qc/Liv-01_S38_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz
+    wildcards: sample=Liv-01_S38_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4120, disk_mib=3930, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Liv-01_S38_L005_R1_001.fastq.gz trimmed/Liv-01_S38_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 18 with external jobid '111992'.
+[Thu Dec 12 15:57:15 2024]
+Finished job 17.
+3 of 52 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:15 2024]
+rule trim_qc:
+    input: trimmed/Int-04_S45_L005_R1_001.fastq.gz, trimmed/Int-04_S45_L005_R2_001.fastq.gz
+    output: trimmed/qc/Int-04_S45_L005_R1_001_fastqc.html, trimmed/qc/Int-04_S45_L005_R1_001_fastqc.zip, trimmed/qc/Int-04_S45_L005_R2_001_fastqc.html, trimmed/qc/Int-04_S45_L005_R2_001_fastqc.zip
+    jobid: 16
+    reason: Missing output files: trimmed/qc/Int-04_S45_L005_R1_001_fastqc.html, trimmed/qc/Int-04_S45_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Int-04_S45_L005_R2_001.fastq.gz, trimmed/Int-04_S45_L005_R1_001.fastq.gz
+    wildcards: sample=Int-04_S45_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3715, disk_mib=3543, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Int-04_S45_L005_R1_001.fastq.gz trimmed/Int-04_S45_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 16 with external jobid '111993'.
+[Thu Dec 12 15:57:16 2024]
+Finished job 15.
+4 of 52 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:16 2024]
+rule trim_qc:
+    input: trimmed/Int-03_S44_L005_R1_001.fastq.gz, trimmed/Int-03_S44_L005_R2_001.fastq.gz
+    output: trimmed/qc/Int-03_S44_L005_R1_001_fastqc.html, trimmed/qc/Int-03_S44_L005_R1_001_fastqc.zip, trimmed/qc/Int-03_S44_L005_R2_001_fastqc.html, trimmed/qc/Int-03_S44_L005_R2_001_fastqc.zip
+    jobid: 14
+    reason: Missing output files: trimmed/qc/Int-03_S44_L005_R1_001_fastqc.html, trimmed/qc/Int-03_S44_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Int-03_S44_L005_R2_001.fastq.gz, trimmed/Int-03_S44_L005_R1_001.fastq.gz
+    wildcards: sample=Int-03_S44_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2867, disk_mib=2735, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Int-03_S44_L005_R1_001.fastq.gz trimmed/Int-03_S44_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 14 with external jobid '111994'.
+[Thu Dec 12 15:57:18 2024]
+Finished job 13.
+5 of 52 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:18 2024]
+rule trim_qc:
+    input: trimmed/Int-02_S43_L005_R1_001.fastq.gz, trimmed/Int-02_S43_L005_R2_001.fastq.gz
+    output: trimmed/qc/Int-02_S43_L005_R1_001_fastqc.html, trimmed/qc/Int-02_S43_L005_R1_001_fastqc.zip, trimmed/qc/Int-02_S43_L005_R2_001_fastqc.html, trimmed/qc/Int-02_S43_L005_R2_001_fastqc.zip
+    jobid: 12
+    reason: Missing output files: trimmed/qc/Int-02_S43_L005_R1_001_fastqc.html, trimmed/qc/Int-02_S43_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Int-02_S43_L005_R2_001.fastq.gz, trimmed/Int-02_S43_L005_R1_001.fastq.gz
+    wildcards: sample=Int-02_S43_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3213, disk_mib=3065, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Int-02_S43_L005_R1_001.fastq.gz trimmed/Int-02_S43_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 12 with external jobid '111995'.
+[Thu Dec 12 15:57:57 2024]
+Finished job 11.
+6 of 52 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:57 2024]
+rule trim_qc:
+    input: trimmed/Int-01_S42_L005_R1_001.fastq.gz, trimmed/Int-01_S42_L005_R2_001.fastq.gz
+    output: trimmed/qc/Int-01_S42_L005_R1_001_fastqc.html, trimmed/qc/Int-01_S42_L005_R1_001_fastqc.zip, trimmed/qc/Int-01_S42_L005_R2_001_fastqc.html, trimmed/qc/Int-01_S42_L005_R2_001_fastqc.zip
+    jobid: 10
+    reason: Missing output files: trimmed/qc/Int-01_S42_L005_R1_001_fastqc.html, trimmed/qc/Int-01_S42_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Int-01_S42_L005_R2_001.fastq.gz, trimmed/Int-01_S42_L005_R1_001.fastq.gz
+    wildcards: sample=Int-01_S42_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2096, disk_mib=1999, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Int-01_S42_L005_R1_001.fastq.gz trimmed/Int-01_S42_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 10 with external jobid '111996'.
+[Thu Dec 12 15:57:59 2024]
+Finished job 21.
+7 of 52 steps (13%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:57:59 2024]
+rule trim_qc:
+    input: trimmed/Liv-02_S39_L005_R1_001.fastq.gz, trimmed/Liv-02_S39_L005_R2_001.fastq.gz
+    output: trimmed/qc/Liv-02_S39_L005_R1_001_fastqc.html, trimmed/qc/Liv-02_S39_L005_R1_001_fastqc.zip, trimmed/qc/Liv-02_S39_L005_R2_001_fastqc.html, trimmed/qc/Liv-02_S39_L005_R2_001_fastqc.zip
+    jobid: 20
+    reason: Missing output files: trimmed/qc/Liv-02_S39_L005_R1_001_fastqc.html, trimmed/qc/Liv-02_S39_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Liv-02_S39_L005_R2_001.fastq.gz, trimmed/Liv-02_S39_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-02_S39_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2503, disk_mib=2388, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Liv-02_S39_L005_R1_001.fastq.gz trimmed/Liv-02_S39_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 20 with external jobid '111997'.
+[Thu Dec 12 15:58:09 2024]
+Finished job 5.
+8 of 52 steps (15%) done
+[Thu Dec 12 15:58:09 2024]
+Finished job 4.
+9 of 52 steps (17%) done
+[Thu Dec 12 15:58:10 2024]
+Finished job 3.
+10 of 52 steps (19%) done
+[Thu Dec 12 15:58:27 2024]
+Finished job 25.
+11 of 52 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 15:58:27 2024]
+rule trim_qc:
+    input: trimmed/Liv-04_S41_L005_R1_001.fastq.gz, trimmed/Liv-04_S41_L005_R2_001.fastq.gz
+    output: trimmed/qc/Liv-04_S41_L005_R1_001_fastqc.html, trimmed/qc/Liv-04_S41_L005_R1_001_fastqc.zip, trimmed/qc/Liv-04_S41_L005_R2_001_fastqc.html, trimmed/qc/Liv-04_S41_L005_R2_001_fastqc.zip
+    jobid: 24
+    reason: Missing output files: trimmed/qc/Liv-04_S41_L005_R1_001_fastqc.html, trimmed/qc/Liv-04_S41_L005_R2_001_fastqc.html; Input files updated by another job: trimmed/Liv-04_S41_L005_R2_001.fastq.gz, trimmed/Liv-04_S41_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-04_S41_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2838, disk_mib=2707, tmpdir=<TBD>, partition=week
+
+fastqc -t 32 trimmed/Liv-04_S41_L005_R1_001.fastq.gz trimmed/Liv-04_S41_L005_R2_001.fastq.gz -o trimmed/qc
+Submitted job 24 with external jobid '111999'.
+[Thu Dec 12 15:58:34 2024]
+Finished job 6.
+12 of 52 steps (23%) done
+[Thu Dec 12 15:58:35 2024]
+Finished job 8.
+13 of 52 steps (25%) done
+[Thu Dec 12 15:58:50 2024]
+Finished job 7.
+14 of 52 steps (27%) done
+[Thu Dec 12 15:59:33 2024]
+Finished job 2.
+15 of 52 steps (29%) done
+[Thu Dec 12 15:59:34 2024]
+Finished job 9.
+16 of 52 steps (31%) done
+[Thu Dec 12 16:00:10 2024]
+Finished job 10.
+17 of 52 steps (33%) done
+[Thu Dec 12 16:00:13 2024]
+Finished job 22.
+18 of 52 steps (35%) done
+[Thu Dec 12 16:00:14 2024]
+Finished job 28.
+19 of 52 steps (37%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:00:14 2024]
+rule star_align_first:
+    input: trimmed/Int-01_S42_L005_R1_001.fastq.gz, trimmed/Int-02_S43_L005_R1_001.fastq.gz, trimmed/Int-03_S44_L005_R1_001.fastq.gz, trimmed/Int-04_S45_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-02_S39_L005_R1_001.fastq.gz, trimmed/Liv-03_S40_L005_R1_001.fastq.gz, trimmed/Liv-04_S41_L005_R1_001.fastq.gz, trimmed/Int-01_S42_L005_R2_001.fastq.gz, trimmed/Int-02_S43_L005_R2_001.fastq.gz, trimmed/Int-03_S44_L005_R2_001.fastq.gz, trimmed/Int-04_S45_L005_R2_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz, trimmed/Liv-02_S39_L005_R2_001.fastq.gz, trimmed/Liv-03_S40_L005_R2_001.fastq.gz, trimmed/Liv-04_S41_L005_R2_001.fastq.gz, genome/star, manifest.tsv
+    output: alignment/star/first-pass.final.out, alignment/star/SJ.out.tab, alignment/star/Aligned.sortedByCoord.out.bam, alignment/star
+    jobid: 27
+    reason: Missing output files: alignment/star/first-pass.final.out, alignment/star/SJ.out.tab, alignment/star/Aligned.sortedByCoord.out.bam, alignment/star; Input files updated by another job: trimmed/Int-04_S45_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Int-03_S44_L005_R2_001.fastq.gz, trimmed/Liv-04_S41_L005_R2_001.fastq.gz, trimmed/Int-04_S45_L005_R2_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz, trimmed/Int-02_S43_L005_R1_001.fastq.gz, genome/star, trimmed/Liv-03_S40_L005_R2_001.fastq.gz, trimmed/Liv-04_S41_L005_R1_001.fastq.gz, trimmed/Int-02_S43_L005_R2_001.fastq.gz, trimmed/Int-01_S42_L005_R2_001.fastq.gz, trimmed/Int-03_S44_L005_R1_001.fastq.gz, trimmed/Liv-02_S39_L005_R2_001.fastq.gz, trimmed/Liv-02_S39_L005_R1_001.fastq.gz, trimmed/Int-01_S42_L005_R1_001.fastq.gz, trimmed/Liv-03_S40_L005_R1_001.fastq.gz
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=25781, disk_mib=24587, tmpdir=<TBD>, partition=week
+
+
+        STAR             --runThreadN 16             --runMode alignReads             --genomeDir genome/star             --readFilesManifest manifest.tsv             --readFilesCommand zcat             --outSAMtype BAM SortedByCoordinate             --outSAMunmapped Within             --outFileNamePrefix alignment/star/
+        cp alignment/star/Log.final.out alignment/star/first-pass.final.out
+        
+Submitted job 27 with external jobid '112000'.
+[Thu Dec 12 16:00:15 2024]
+Finished job 18.
+20 of 52 steps (38%) done
+[Thu Dec 12 16:00:16 2024]
+Finished job 16.
+21 of 52 steps (40%) done
+[Thu Dec 12 16:00:17 2024]
+Finished job 14.
+22 of 52 steps (42%) done
+[Thu Dec 12 16:00:18 2024]
+Finished job 12.
+23 of 52 steps (44%) done
+[Thu Dec 12 16:00:56 2024]
+Finished job 20.
+24 of 52 steps (46%) done
+[Thu Dec 12 16:01:32 2024]
+Finished job 24.
+25 of 52 steps (48%) done
+[Thu Dec 12 16:16:58 2024]
+Finished job 31.
+26 of 52 steps (50%) done
+Select jobs to execute...
+Execute 8 jobs...
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Int-04_S45_L005_R1_001.fastq.gz, trimmed/Int-04_S45_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Int-04_S45_L005.sam
+    jobid: 34
+    reason: Missing output files: alignment/hisat/Int-04_S45_L005.sam; Input files updated by another job: trimmed/Int-04_S45_L005_R2_001.fastq.gz, trimmed/Int-04_S45_L005_R1_001.fastq.gz, genome/hisat
+    wildcards: sample=Int-04_S45_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4608, disk_mib=4395, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Int-04_S45_L005_R1_001.fastq.gz -2 trimmed/Int-04_S45_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Int-04_S45_L005.log --new-summary > alignment/hisat/Int-04_S45_L005.sam
+Submitted job 34 with external jobid '112013'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Int-03_S44_L005_R1_001.fastq.gz, trimmed/Int-03_S44_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Int-03_S44_L005.sam
+    jobid: 33
+    reason: Missing output files: alignment/hisat/Int-03_S44_L005.sam; Input files updated by another job: trimmed/Int-03_S44_L005_R2_001.fastq.gz, genome/hisat, trimmed/Int-03_S44_L005_R1_001.fastq.gz
+    wildcards: sample=Int-03_S44_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3760, disk_mib=3586, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Int-03_S44_L005_R1_001.fastq.gz -2 trimmed/Int-03_S44_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Int-03_S44_L005.log --new-summary > alignment/hisat/Int-03_S44_L005.sam
+Submitted job 33 with external jobid '112014'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Int-02_S43_L005_R1_001.fastq.gz, trimmed/Int-02_S43_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Int-02_S43_L005.sam
+    jobid: 32
+    reason: Missing output files: alignment/hisat/Int-02_S43_L005.sam; Input files updated by another job: trimmed/Int-02_S43_L005_R2_001.fastq.gz, trimmed/Int-02_S43_L005_R1_001.fastq.gz, genome/hisat
+    wildcards: sample=Int-02_S43_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=4106, disk_mib=3916, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Int-02_S43_L005_R1_001.fastq.gz -2 trimmed/Int-02_S43_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Int-02_S43_L005.log --new-summary > alignment/hisat/Int-02_S43_L005.sam
+Submitted job 32 with external jobid '112015'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Int-01_S42_L005_R1_001.fastq.gz, trimmed/Int-01_S42_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Int-01_S42_L005.sam
+    jobid: 30
+    reason: Missing output files: alignment/hisat/Int-01_S42_L005.sam; Input files updated by another job: trimmed/Int-01_S42_L005_R2_001.fastq.gz, genome/hisat, trimmed/Int-01_S42_L005_R1_001.fastq.gz
+    wildcards: sample=Int-01_S42_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=2989, disk_mib=2851, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Int-01_S42_L005_R1_001.fastq.gz -2 trimmed/Int-01_S42_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Int-01_S42_L005.log --new-summary > alignment/hisat/Int-01_S42_L005.sam
+Submitted job 30 with external jobid '112016'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Liv-04_S41_L005_R1_001.fastq.gz, trimmed/Liv-04_S41_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Liv-04_S41_L005.sam
+    jobid: 38
+    reason: Missing output files: alignment/hisat/Liv-04_S41_L005.sam; Input files updated by another job: trimmed/Liv-04_S41_L005_R2_001.fastq.gz, genome/hisat, trimmed/Liv-04_S41_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-04_S41_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3731, disk_mib=3559, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Liv-04_S41_L005_R1_001.fastq.gz -2 trimmed/Liv-04_S41_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Liv-04_S41_L005.log --new-summary > alignment/hisat/Liv-04_S41_L005.sam
+Submitted job 38 with external jobid '112017'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Liv-03_S40_L005_R1_001.fastq.gz, trimmed/Liv-03_S40_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Liv-03_S40_L005.sam
+    jobid: 37
+    reason: Missing output files: alignment/hisat/Liv-03_S40_L005.sam; Input files updated by another job: genome/hisat, trimmed/Liv-03_S40_L005_R2_001.fastq.gz, trimmed/Liv-03_S40_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-03_S40_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=5321, disk_mib=5075, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Liv-03_S40_L005_R1_001.fastq.gz -2 trimmed/Liv-03_S40_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Liv-03_S40_L005.log --new-summary > alignment/hisat/Liv-03_S40_L005.sam
+Submitted job 37 with external jobid '112018'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Liv-02_S39_L005_R1_001.fastq.gz, trimmed/Liv-02_S39_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Liv-02_S39_L005.sam
+    jobid: 36
+    reason: Missing output files: alignment/hisat/Liv-02_S39_L005.sam; Input files updated by another job: trimmed/Liv-02_S39_L005_R2_001.fastq.gz, genome/hisat, trimmed/Liv-02_S39_L005_R1_001.fastq.gz
+    wildcards: sample=Liv-02_S39_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=3396, disk_mib=3239, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Liv-02_S39_L005_R1_001.fastq.gz -2 trimmed/Liv-02_S39_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Liv-02_S39_L005.log --new-summary > alignment/hisat/Liv-02_S39_L005.sam
+Submitted job 36 with external jobid '112019'.
+
+[Thu Dec 12 16:16:58 2024]
+rule hisat_align:
+    input: genome/genome.fa, genome/annotations.gtf, trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz, genome/hisat
+    output: alignment/hisat/Liv-01_S38_L005.sam
+    jobid: 35
+    reason: Missing output files: alignment/hisat/Liv-01_S38_L005.sam; Input files updated by another job: trimmed/Liv-01_S38_L005_R1_001.fastq.gz, trimmed/Liv-01_S38_L005_R2_001.fastq.gz, genome/hisat
+    wildcards: sample=Liv-01_S38_L005
+    threads: 16
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=5013, disk_mib=4781, tmpdir=<TBD>, partition=week
+
+hisat2 genome/hisat/genome -p 16 -1 trimmed/Liv-01_S38_L005_R1_001.fastq.gz -2 trimmed/Liv-01_S38_L005_R2_001.fastq.gz --rg-id  --rg SM: --summary-file alignment/hisat/Liv-01_S38_L005.log --new-summary > alignment/hisat/Liv-01_S38_L005.sam
+Submitted job 35 with external jobid '112020'.
+[Thu Dec 12 16:21:08 2024]
+Finished job 37.
+27 of 52 steps (52%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:21:08 2024]
+rule convert_hisat:
+    input: alignment/hisat/Liv-03_S40_L005.sam
+    output: alignment/hisat/Liv-03_S40_L005.bam
+    jobid: 46
+    reason: Missing output files: alignment/hisat/Liv-03_S40_L005.bam; Input files updated by another job: alignment/hisat/Liv-03_S40_L005.sam
+    wildcards: sample=Liv-03_S40_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Liv-03_S40_L005.sam | samtools sort -@ 32 > alignment/hisat/Liv-03_S40_L005.bam
+Submitted job 46 with external jobid '112021'.
+[Thu Dec 12 16:21:20 2024]
+Finished job 46.
+28 of 52 steps (54%) done
+[Thu Dec 12 16:28:15 2024]
+Finished job 38.
+29 of 52 steps (56%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:28:15 2024]
+rule convert_hisat:
+    input: alignment/hisat/Liv-04_S41_L005.sam
+    output: alignment/hisat/Liv-04_S41_L005.bam
+    jobid: 47
+    reason: Missing output files: alignment/hisat/Liv-04_S41_L005.bam; Input files updated by another job: alignment/hisat/Liv-04_S41_L005.sam
+    wildcards: sample=Liv-04_S41_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Liv-04_S41_L005.sam | samtools sort -@ 32 > alignment/hisat/Liv-04_S41_L005.bam
+Submitted job 47 with external jobid '112026'.
+[Thu Dec 12 16:28:27 2024]
+Finished job 47.
+30 of 52 steps (58%) done
+[Thu Dec 12 16:32:50 2024]
+Finished job 35.
+31 of 52 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:32:50 2024]
+rule convert_hisat:
+    input: alignment/hisat/Liv-01_S38_L005.sam
+    output: alignment/hisat/Liv-01_S38_L005.bam
+    jobid: 44
+    reason: Missing output files: alignment/hisat/Liv-01_S38_L005.bam; Input files updated by another job: alignment/hisat/Liv-01_S38_L005.sam
+    wildcards: sample=Liv-01_S38_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Liv-01_S38_L005.sam | samtools sort -@ 32 > alignment/hisat/Liv-01_S38_L005.bam
+Submitted job 44 with external jobid '112028'.
+[Thu Dec 12 16:33:06 2024]
+Finished job 44.
+32 of 52 steps (62%) done
+[Thu Dec 12 16:33:17 2024]
+Finished job 34.
+33 of 52 steps (63%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:33:17 2024]
+rule convert_hisat:
+    input: alignment/hisat/Int-04_S45_L005.sam
+    output: alignment/hisat/Int-04_S45_L005.bam
+    jobid: 43
+    reason: Missing output files: alignment/hisat/Int-04_S45_L005.bam; Input files updated by another job: alignment/hisat/Int-04_S45_L005.sam
+    wildcards: sample=Int-04_S45_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Int-04_S45_L005.sam | samtools sort -@ 32 > alignment/hisat/Int-04_S45_L005.bam
+Submitted job 43 with external jobid '112029'.
+[Thu Dec 12 16:33:31 2024]
+Finished job 43.
+34 of 52 steps (65%) done
+[Thu Dec 12 16:36:49 2024]
+Finished job 33.
+35 of 52 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 12 16:36:49 2024]
+rule convert_hisat:
+    input: alignment/hisat/Int-03_S44_L005.sam
+    output: alignment/hisat/Int-03_S44_L005.bam
+    jobid: 42
+    reason: Missing output files: alignment/hisat/Int-03_S44_L005.bam; Input files updated by another job: alignment/hisat/Int-03_S44_L005.sam
+    wildcards: sample=Int-03_S44_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Int-03_S44_L005.sam | samtools sort -@ 32 > alignment/hisat/Int-03_S44_L005.bam
+Submitted job 42 with external jobid '112031'.
+[Thu Dec 12 16:37:02 2024]
+Finished job 42.
+36 of 52 steps (69%) done
