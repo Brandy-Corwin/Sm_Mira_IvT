@@ -59,7 +59,7 @@ star_pca_fit <- t(log10(star_counts_m + 1)) |>
 star_pca_plot_before_deseq2 <- star_pca_fit |>
     augment(t(star_counts_m)) |>
     dplyr::rename(sample = .rownames) |>
-    mutate(sample = str_remove(sample, '_[0-9]')) |>
+    mutate(sample = str_remove(sample, '-[0-9]+')) |>
     ggplot(aes(.fittedPC1, .fittedPC2, color = sample)) + 
     geom_point(size = 5)
 ggsave("plots_reduced/star_pca_before_deseq2.png")
@@ -153,7 +153,7 @@ hisat_pca_fit <- t(log10(hisat_counts_m + 1)) |>
 hisat_pca_plot_before_deseq2 <- hisat_pca_fit |>
     augment(t(hisat_counts_m)) |>
     dplyr::rename(sample = .rownames) |>
-    mutate(sample = str_remove(sample, '_[0-9]')) |>
+    mutate(sample = str_remove(sample, '-[0-9]+')) |>
     ggplot(aes(.fittedPC1, .fittedPC2, color = sample)) + 
     geom_point(size = 5)
 ggsave("plots_reduced/hisat_pca_before_deseq2.png")
