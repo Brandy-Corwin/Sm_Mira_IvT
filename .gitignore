@@ -26,6 +26,8 @@ pipeline/qualimap/*
 pipeline/checkers/*
 pipeline/counting/*
 
+pipeline_reduced/logs/*
+pipeline_reduced/SM:
 pipeline_reduced/genome_reduced/*
 pipeline_reduced/fastq_reduced/qc/*
 pipeline_reduced/trimmed_reduced/*

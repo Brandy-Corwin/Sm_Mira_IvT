@@ -1,0 +1,46 @@
+Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	STAR_mqc-generalstats-star-uniquely_mapped	HISAT2_mqc-generalstats-hisat2-overall_alignment_rate	Picard_mqc-generalstats-picard-PERCENT_DUPLICATION	FastQC_mqc-generalstats-fastqc-percent_gc	featureCounts_mqc-generalstats-featurecounts-Assigned	featureCounts_mqc-generalstats-featurecounts-percent_assigned	STAR_mqc-generalstats-star-uniquely_mapped_percent	FastQC_mqc-generalstats-fastqc-total_sequences	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-median_sequence_length	FastQC_mqc-generalstats-fastqc-avg_sequence_length
+alignment_reduced | hisat | Int-01_S42_L005			65.3									
+alignment_reduced | hisat | Int-02_S43_L005			19.54									
+alignment_reduced | hisat | Int-03_S44_L005			17.85									
+alignment_reduced | hisat | Int-04_S45_L005			15.28									
+alignment_reduced | hisat | Liv-01_S38_L005			9.13									
+alignment_reduced | hisat | Liv-02_S39_L005			49.33									
+alignment_reduced | hisat | Liv-03_S40_L005			1.98									
+alignment_reduced | hisat | Liv-04_S41_L005			16.48									
+alignment_reduced | star |		4995748.0						4.01				
+counting_reduced | counts_reduced | hisat						41955	0.0957939437678248					
+counting_reduced | counts_reduced | star						22222	0.08337990355967126					
+counting_reduced | logs_reduced |				0.342203								
+counting_reduced | logs_reduced | merged				0.448994								
+fastq_reduced | qc | Int-01_S42_L005_R1_001	73.15821097531398				49.0				12421987.0	36.36363636363637	151	151.0
+fastq_reduced | qc | Int-01_S42_L005_R2_001	74.4516759037079				50.0				12421987.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Int-02_S43_L005_R1_001	68.19962108276289				50.0				15738415.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Int-02_S43_L005_R2_001	70.49757372103419				51.0				15738415.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Int-03_S44_L005_R1_001	56.984115785930044				49.0				13521806.0	36.36363636363637	151	151.0
+fastq_reduced | qc | Int-03_S44_L005_R2_001	60.480094805253145				50.0				13521806.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Int-04_S45_L005_R1_001	58.44512738901909				49.0				17961443.0	36.36363636363637	151	151.0
+fastq_reduced | qc | Int-04_S45_L005_R2_001	62.028688620825605				50.0				17961443.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Liv-01_S38_L005_R1_001	60.54877132695965				49.0				20176743.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Liv-01_S38_L005_R2_001	64.06773166971985				50.0				20176743.0	54.54545454545454	151	151.0
+fastq_reduced | qc | Liv-02_S39_L005_R1_001	76.03564103010457				52.0				14755790.0	36.36363636363637	151	151.0
+fastq_reduced | qc | Liv-02_S39_L005_R2_001	77.04462386226162				53.0				14755790.0	54.54545454545454	151	151.0
+fastq_reduced | qc | Liv-03_S40_L005_R1_001	58.64546286014226				48.0				20441278.0	45.45454545454545	151	151.0
+fastq_reduced | qc | Liv-03_S40_L005_R2_001	61.94559077039338				49.0				20441278.0	54.54545454545454	151	151.0
+fastq_reduced | qc | Liv-04_S41_L005_R1_001	57.4439038274358				48.0				13461820.0	36.36363636363637	151	151.0
+fastq_reduced | qc | Liv-04_S41_L005_R2_001	60.377076615581636				49.0				13461820.0	45.45454545454545	151	151.0
+trimmed_reduced | qc | Int-01_S42_L005_R1_001	74.9934871634203				48.0				12168802.0	36.36363636363637	141	133.40066803617972
+trimmed_reduced | qc | Int-01_S42_L005_R2_001	74.79063887834909				48.0				12168802.0	18.181818181818183	141	133.53833491579533
+trimmed_reduced | qc | Int-02_S43_L005_R1_001	70.25897137863676				48.0				15058640.0	36.36363636363637	141	135.46629941349286
+trimmed_reduced | qc | Int-02_S43_L005_R2_001	70.07323530395223				49.0				15058640.0	27.27272727272727	141	135.60721027928153
+trimmed_reduced | qc | Int-03_S44_L005_R1_001	60.98025268960878				48.0				13203535.0	27.27272727272727	141	135.0693586982577
+trimmed_reduced | qc | Int-03_S44_L005_R2_001	60.65701958347072				48.0				13203535.0	27.27272727272727	141	135.22958298667743
+trimmed_reduced | qc | Int-04_S45_L005_R1_001	62.04374445901256				47.0				17401148.0	27.27272727272727	141	131.75306347604192
+trimmed_reduced | qc | Int-04_S45_L005_R2_001	62.07456567008937				48.0				17401148.0	27.27272727272727	141	131.98175706568324
+trimmed_reduced | qc | Liv-01_S38_L005_R1_001	64.72542827388773				48.0				19736635.0	27.27272727272727	141	130.00806175926138
+trimmed_reduced | qc | Liv-01_S38_L005_R2_001	64.67151960147838				48.0				19736635.0	36.36363636363637	141	130.31327194326693
+trimmed_reduced | qc | Liv-02_S39_L005_R1_001	76.21381648575205				48.0				13632626.0	36.36363636363637	141	129.49945006926765
+trimmed_reduced | qc | Liv-02_S39_L005_R2_001	75.83992652159398				49.0				13632626.0	18.181818181818183	141	129.84908828277105
+trimmed_reduced | qc | Liv-03_S40_L005_R1_001	63.355774806427874				48.0				20186446.0	27.27272727272727	141	136.56298017986921
+trimmed_reduced | qc | Liv-03_S40_L005_R2_001	62.564811130007506				48.0				20186446.0	36.36363636363637	141	136.63798015757703
+trimmed_reduced | qc | Liv-04_S41_L005_R1_001	60.73333761116651				47.0				13116682.0	27.27272727272727	141	134.17092668709967
+trimmed_reduced | qc | Liv-04_S41_L005_R2_001	60.55069731170772				48.0				13116682.0	27.27272727272727	141	134.36751489439175

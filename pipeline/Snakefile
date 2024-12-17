@@ -347,4 +347,8 @@ rule diffexp:
     conda:
         "envs/r.yaml"
     shell:
-        "Rscript {input.R_script}"
+        """
+        mkdir -p {output.matrices}
+        mkdir -p {output.plots}
+        Rscript {input.R_script}
+        """

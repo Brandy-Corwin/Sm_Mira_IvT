@@ -342,9 +342,13 @@ rule diffexp:
         hisat="counting_reduced/counts_reduced/hisat_counts.tsv",
         R_script="diffexp_reduced.R"
     output:
-        directory("count_matrices_reduced/"),
-        directory("plots_reduced/")
+        matrices=directory("count_matrices_reduced/"),
+        plots=directory("plots_reduced/")
     conda:
         "envs/r.yaml"
     shell:
-        "Rscript {input.R_script}"
+        """
+        mkdir -p {output.matrices}
+        mkdir -p {output.plots}
+        Rscript {input.R_script}
+        """
