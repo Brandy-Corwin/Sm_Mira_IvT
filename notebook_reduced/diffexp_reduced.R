@@ -85,8 +85,7 @@ star_volcano_plot <- star_volcano_data |>
     ggplot(aes(x = log2FoldChange, y = -log10(padj))) +
     geom_point() +
     geom_vline(xintercept = 2) +
-    geom_vline(xintercept = -2) +
-    theme_minimal()
+    geom_vline(xintercept = -2)
 ggsave("plots_reduced/star_volcano_plot.png")
 
 star_vsd <- varianceStabilizingTransformation(star_dds)
@@ -179,8 +178,7 @@ hisat_volcano_plot <- hisat_volcano_data |>
     ggplot(aes(x = log2FoldChange, y = -log10(padj))) +
     geom_point() +
     geom_vline(xintercept = 2) +
-    geom_vline(xintercept = -2) +
-    theme_minimal()
+    geom_vline(xintercept = -2)
 ggsave("plots_reduced/hisat_volcano_plot.png")
 
 hisat_vsd <- varianceStabilizingTransformation(hisat_dds)
