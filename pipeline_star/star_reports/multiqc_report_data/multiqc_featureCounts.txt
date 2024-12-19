@@ -1,0 +1,2 @@
+Sample	Assigned	Unassigned_MultiMapping	Unassigned_Singleton	Unassigned_Duplicate	Unassigned_Overlapping_Length	Unassigned_Ambiguity	Unassigned_Secondary	Unassigned_NonSplit	Unassigned_Read_Type	Unassigned_NoFeatures	Unassigned_FragmentLength	Total	Unassigned_Chimera	Unassigned_MappingQuality	Unassigned_Unmapped	percent_assigned
+star_counting | counts | star	111838	0	0	15006149	0	3364	0	0	0	8705226	0	267616704	0	0	243790127	0.04179036597057858

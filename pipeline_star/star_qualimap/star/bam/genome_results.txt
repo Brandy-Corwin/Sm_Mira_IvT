@@ -1,0 +1,151 @@
+BamQC report
+-----------------------------------
+
+>>>>>>> Input
+
+     bam file = alignment/star/Aligned.sortedByCoord.out.bam
+     outfile = star_qualimap/star/bam/genome_results.txt
+
+
+>>>>>>> Reference
+
+     number of bases = 391,422,299 bp
+     number of contigs = 10
+
+
+>>>>>>> Globals
+
+     number of windows = 409
+
+     number of reads = 2,490,858,946
+     number of mapped reads = 131,986,017 (5.3%)
+     number of secondary alignments = 53,338,449
+
+     number of mapped paired reads (first in pair) = 65,993,090
+     number of mapped paired reads (second in pair) = 65,992,927
+     number of mapped paired reads (both in pair) = 131,985,714
+     number of mapped paired reads (singletons) = 303
+
+     number of mapped bases = 154,404,303,450 bp
+     number of sequenced bases = 12,828,368,034 bp
+     number of aligned bases = 0 bp
+     number of duplicated reads (estimated) = 92,082,957
+     duplication rate = 80.96%
+
+
+>>>>>>> Globals inside
+
+     regions size = 208,164,228 (53.18%)
+     number of mapped reads = 100,096,810 (4.02%)
+     number of mapped paired reads (first in pair) = 50,497,039
+     number of mapped paired reads (second in pair) = 49,599,771
+     number of mapped paired reads (both in pair) = 100,096,564
+     number of mapped paired reads (singletons) = 246
+
+
+>>>>>>> Insert size
+
+     mean insert size = 14,736.8502
+     std insert size = 47,607.5617
+     median insert size = 364
+
+
+>>>>>>> Mapping quality
+
+     mean mapping quality = 242.4878
+
+
+>>>>>>> ACTG content
+
+     number of A's = 3,922,273,754 bp (30.58%)
+     number of C's = 2,500,061,604 bp (19.49%)
+     number of T's = 3,905,713,615 bp (30.45%)
+     number of G's = 2,498,451,399 bp (19.48%)
+     number of N's = 1,867,662 bp (0.01%)
+
+     GC percentage = 38.96%
+
+
+>>>>>>> Mismatches and indels
+
+    general error rate = 0
+    number of mismatches = 0
+    number of insertions = 1,211,886
+    mapped reads with insertion percentage = 0.91%
+    number of deletions = 1,066,697
+    mapped reads with deletion percentage = 0.8%
+    homopolymer indels = 46.18%
+
+
+>>>>>>> Coverage
+
+     mean coverageData = 741.7427X
+     std coverageData = 1,202.5818X
+
+     There is a 53.47% of reference with a coverageData >= 1X
+     There is a 49.53% of reference with a coverageData >= 2X
+     There is a 44.59% of reference with a coverageData >= 3X
+     There is a 41.54% of reference with a coverageData >= 4X
+     There is a 37.71% of reference with a coverageData >= 5X
+     There is a 35.33% of reference with a coverageData >= 6X
+     There is a 32.42% of reference with a coverageData >= 7X
+     There is a 30.55% of reference with a coverageData >= 8X
+     There is a 28.3% of reference with a coverageData >= 9X
+     There is a 26.8% of reference with a coverageData >= 10X
+     There is a 25.05% of reference with a coverageData >= 11X
+     There is a 23.84% of reference with a coverageData >= 12X
+     There is a 22.45% of reference with a coverageData >= 13X
+     There is a 21.44% of reference with a coverageData >= 14X
+     There is a 20.31% of reference with a coverageData >= 15X
+     There is a 19.47% of reference with a coverageData >= 16X
+     There is a 18.56% of reference with a coverageData >= 17X
+     There is a 17.84% of reference with a coverageData >= 18X
+     There is a 17.09% of reference with a coverageData >= 19X
+     There is a 16.49% of reference with a coverageData >= 20X
+     There is a 15.86% of reference with a coverageData >= 21X
+     There is a 15.35% of reference with a coverageData >= 22X
+     There is a 14.82% of reference with a coverageData >= 23X
+     There is a 14.37% of reference with a coverageData >= 24X
+     There is a 13.92% of reference with a coverageData >= 25X
+     There is a 13.54% of reference with a coverageData >= 26X
+     There is a 13.15% of reference with a coverageData >= 27X
+     There is a 12.82% of reference with a coverageData >= 28X
+     There is a 12.49% of reference with a coverageData >= 29X
+     There is a 12.19% of reference with a coverageData >= 30X
+     There is a 11.9% of reference with a coverageData >= 31X
+     There is a 11.64% of reference with a coverageData >= 32X
+     There is a 11.39% of reference with a coverageData >= 33X
+     There is a 11.16% of reference with a coverageData >= 34X
+     There is a 10.93% of reference with a coverageData >= 35X
+     There is a 10.73% of reference with a coverageData >= 36X
+     There is a 10.53% of reference with a coverageData >= 37X
+     There is a 10.35% of reference with a coverageData >= 38X
+     There is a 10.17% of reference with a coverageData >= 39X
+     There is a 10% of reference with a coverageData >= 40X
+     There is a 9.84% of reference with a coverageData >= 41X
+     There is a 9.69% of reference with a coverageData >= 42X
+     There is a 9.54% of reference with a coverageData >= 43X
+     There is a 9.41% of reference with a coverageData >= 44X
+     There is a 9.28% of reference with a coverageData >= 45X
+     There is a 9.15% of reference with a coverageData >= 46X
+     There is a 9.03% of reference with a coverageData >= 47X
+     There is a 8.91% of reference with a coverageData >= 48X
+     There is a 8.8% of reference with a coverageData >= 49X
+     There is a 8.69% of reference with a coverageData >= 50X
+     There is a 8.59% of reference with a coverageData >= 51X
+
+
+>>>>>>> Coverage per contig
+
+	SM_V10_1	48505018	39425413329	812.81102357286	1506.4039409627055
+	SM_V10_Z	48612531	20146405612	414.42823892465094	822.5847285905986
+	SM_V10_3	25231165	15587991059	617.8070278958581	1013.4675692863697
+	SM_V10_4	24510918	8207668775	334.85766526573997	898.2735690152916
+	SM_V10_2	24586907	39322237950	1599.3161705943737	1763.1137942371533
+	SM_V10_6	13483956	5135427897	380.85469108620646	954.4122283585805
+	SM_V10_5	11389750	22586221444	1983.0304830220155	2348.7446414851306
+	SM_V10_7	11336734	3693549450	325.80366179536367	612.3540655957917
+	SM_V10_WSR	497886	91217122	183.20885102212154	333.81273139158316
+	SM_V10_MITO	9363	208170812	22233.34529531133	12350.651290132993
+
+

@@ -342,8 +342,8 @@ rule diffexp:
         hisat="counting/counts/hisat_counts.tsv",
         R_script="diffexp.R"
     output:
-        directory("count_matrices/"),
-        directory("plots/")
+        matrices=directory("count_matrices/"),
+        plots=directory("plots/")
     conda:
         "envs/r.yaml"
     shell:

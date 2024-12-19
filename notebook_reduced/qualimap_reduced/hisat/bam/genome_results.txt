@@ -1,0 +1,151 @@
+BamQC report
+-----------------------------------
+
+>>>>>>> Input
+
+     bam file = alignment_reduced/hisat/merged.bam
+     outfile = qualimap_reduced/hisat/bam/genome_results.txt
+
+
+>>>>>>> Reference
+
+     number of bases = 391,422,299 bp
+     number of contigs = 10
+
+
+>>>>>>> Globals
+
+     number of windows = 409
+
+     number of reads = 249,009,028
+     number of mapped reads = 53,991,317 (21.68%)
+     number of secondary alignments = 324,978,592
+
+     number of mapped paired reads (first in pair) = 27,167,790
+     number of mapped paired reads (second in pair) = 26,823,527
+     number of mapped paired reads (both in pair) = 53,131,856
+     number of mapped paired reads (singletons) = 859,461
+
+     number of mapped bases = 13,772,531,080 bp
+     number of sequenced bases = 1,720,301,076 bp
+     number of aligned bases = 0 bp
+     number of duplicated reads (estimated) = 9,393,012
+     duplication rate = 42.66%
+
+
+>>>>>>> Globals inside
+
+     regions size = 208,164,228 (53.18%)
+     number of mapped reads = 13,768,166 (5.53%)
+     number of mapped paired reads (first in pair) = 7,088,600
+     number of mapped paired reads (second in pair) = 6,679,566
+     number of mapped paired reads (both in pair) = 13,552,977
+     number of mapped paired reads (singletons) = 215,189
+
+
+>>>>>>> Insert size
+
+     mean insert size = 2,618.914
+     std insert size = 120,115.5489
+     median insert size = 223
+
+
+>>>>>>> Mapping quality
+
+     mean mapping quality = 55.6216
+
+
+>>>>>>> ACTG content
+
+     number of A's = 523,753,362 bp (30.45%)
+     number of C's = 337,813,015 bp (19.64%)
+     number of T's = 521,567,229 bp (30.32%)
+     number of G's = 336,924,826 bp (19.59%)
+     number of N's = 242,644 bp (0.01%)
+
+     GC percentage = 39.22%
+
+
+>>>>>>> Mismatches and indels
+
+    general error rate = 0.0003
+    number of mismatches = 3,441,078
+    number of insertions = 155,133
+    mapped reads with insertion percentage = 0.28%
+    number of deletions = 130,245
+    mapped reads with deletion percentage = 0.24%
+    homopolymer indels = 47.95%
+
+
+>>>>>>> Coverage
+
+     mean coverageData = 66.1619X
+     std coverageData = 139.33X
+
+     There is a 34.13% of reference with a coverageData >= 1X
+     There is a 25.56% of reference with a coverageData >= 2X
+     There is a 17.54% of reference with a coverageData >= 3X
+     There is a 14.51% of reference with a coverageData >= 4X
+     There is a 11.74% of reference with a coverageData >= 5X
+     There is a 10.35% of reference with a coverageData >= 6X
+     There is a 9.14% of reference with a coverageData >= 7X
+     There is a 8.36% of reference with a coverageData >= 8X
+     There is a 7.7% of reference with a coverageData >= 9X
+     There is a 7.21% of reference with a coverageData >= 10X
+     There is a 6.79% of reference with a coverageData >= 11X
+     There is a 6.44% of reference with a coverageData >= 12X
+     There is a 6.14% of reference with a coverageData >= 13X
+     There is a 5.87% of reference with a coverageData >= 14X
+     There is a 5.63% of reference with a coverageData >= 15X
+     There is a 5.42% of reference with a coverageData >= 16X
+     There is a 5.23% of reference with a coverageData >= 17X
+     There is a 5.05% of reference with a coverageData >= 18X
+     There is a 4.88% of reference with a coverageData >= 19X
+     There is a 4.73% of reference with a coverageData >= 20X
+     There is a 4.59% of reference with a coverageData >= 21X
+     There is a 4.46% of reference with a coverageData >= 22X
+     There is a 4.33% of reference with a coverageData >= 23X
+     There is a 4.22% of reference with a coverageData >= 24X
+     There is a 4.11% of reference with a coverageData >= 25X
+     There is a 4% of reference with a coverageData >= 26X
+     There is a 3.9% of reference with a coverageData >= 27X
+     There is a 3.81% of reference with a coverageData >= 28X
+     There is a 3.72% of reference with a coverageData >= 29X
+     There is a 3.63% of reference with a coverageData >= 30X
+     There is a 3.55% of reference with a coverageData >= 31X
+     There is a 3.47% of reference with a coverageData >= 32X
+     There is a 3.39% of reference with a coverageData >= 33X
+     There is a 3.32% of reference with a coverageData >= 34X
+     There is a 3.25% of reference with a coverageData >= 35X
+     There is a 3.18% of reference with a coverageData >= 36X
+     There is a 3.12% of reference with a coverageData >= 37X
+     There is a 3.06% of reference with a coverageData >= 38X
+     There is a 3% of reference with a coverageData >= 39X
+     There is a 2.94% of reference with a coverageData >= 40X
+     There is a 2.88% of reference with a coverageData >= 41X
+     There is a 2.83% of reference with a coverageData >= 42X
+     There is a 2.77% of reference with a coverageData >= 43X
+     There is a 2.72% of reference with a coverageData >= 44X
+     There is a 2.67% of reference with a coverageData >= 45X
+     There is a 2.63% of reference with a coverageData >= 46X
+     There is a 2.58% of reference with a coverageData >= 47X
+     There is a 2.54% of reference with a coverageData >= 48X
+     There is a 2.49% of reference with a coverageData >= 49X
+     There is a 2.45% of reference with a coverageData >= 50X
+     There is a 2.41% of reference with a coverageData >= 51X
+
+
+>>>>>>> Coverage per contig
+
+	SM_V10_1	48505018	2707858514	55.8263582955479	161.9110634109146
+	SM_V10_Z	48612531	2484271277	51.103516436945036	113.27675873023307
+	SM_V10_3	25231165	1450943697	57.50601278220803	124.08476026353334
+	SM_V10_4	24510918	1081857058	44.13776171092409	127.0231545630607
+	SM_V10_2	24586907	3121974783	126.97712579300845	167.1728738318704
+	SM_V10_6	13483956	619122230	45.91547391581521	117.58975136775865
+	SM_V10_5	11389750	1834355620	161.0531943194539	221.122209102452
+	SM_V10_7	11336734	433046401	38.198514757424846	73.61080638549043
+	SM_V10_WSR	497886	10633787	21.357875095905488	48.33475352206364
+	SM_V10_MITO	9363	28467713	3040.447826551319	1677.8147178838162
+
+

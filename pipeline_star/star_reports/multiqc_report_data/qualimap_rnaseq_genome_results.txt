@@ -1,0 +1,2 @@
+Sample	reads_aligned_overlapping_exon	non_unique_alignments	reads_aligned_exonic	reads_aligned_genes	reads_aligned_intronic	reads_aligned_intergenic	ambiguous_alignments	5_3_bias	bam_file	not_aligned	reads_aligned	total_alignments
+star_qualimap | star | rnaseq |	5339038.0	77853440.0	71314381.0	71314381.0	13185954.0	22895074.0	75617.0	1.7	alignment/star/Aligned.sortedByCoord.out.bam	2358872929.0	131986017.0	185324466.0

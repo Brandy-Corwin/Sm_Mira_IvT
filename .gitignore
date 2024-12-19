@@ -3,7 +3,6 @@ notebook/genome/*
 notebook/fastq/qc/*
 notebook/trimmed/*
 notebook/alignment/*
-notebook/qualimap/*
 notebook/checkers/*
 notebook/counting/*
 
@@ -11,7 +10,6 @@ notebook_reduced/genome_reduced/*
 notebook_reduced/fastq_reduced/qc/*
 notebook_reduced/trimmed_reduced/*
 notebook_reduced/alignment_reduced/*
-notebook_reduced/qualimap_reduced/*
 notebook_reduced/checkers_reduced/*
 notebook_reduced/counting_reduced/*
 
@@ -22,7 +20,6 @@ pipeline/genome/*
 pipeline/fastq/qc/*
 pipeline/trimmed/*
 pipeline/alignment/*
-pipeline/qualimap/*
 pipeline/checkers/*
 pipeline/counting/*
 
@@ -32,9 +29,17 @@ pipeline_reduced/genome_reduced/*
 pipeline_reduced/fastq_reduced/qc/*
 pipeline_reduced/trimmed_reduced/*
 pipeline_reduced/alignment_reduced/*
-pipeline_reduced/qualimap_reduced/*
 pipeline_reduced/checkers_reduced/*
 pipeline_reduced/counting_reduced/*
+
+pipeline_star/logs/*
+pipeline_star/SM:
+pipeline_star/genome/*
+pipeline_star/fastq/qc/*
+pipeline_star/trimmed/*
+pipeline_star/alignment/*
+pipeline_star/star_checkers/*
+pipeline_star/star_counting/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,38 @@
+Sample	QualiMap_mqc-generalstats-qualimap-mapped_reads	QualiMap_mqc-generalstats-qualimap-reads_aligned	QualiMap_mqc-generalstats-qualimap-avg_gc	QualiMap_mqc-generalstats-qualimap-10_x_pc	featureCounts_mqc-generalstats-featurecounts-Assigned	STAR_mqc-generalstats-star-uniquely_mapped_percent	featureCounts_mqc-generalstats-featurecounts-percent_assigned	QualiMap_mqc-generalstats-qualimap-mean_coverage	FastQC_mqc-generalstats-fastqc-median_sequence_length	QualiMap_mqc-generalstats-qualimap-50_x_pc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	STAR_mqc-generalstats-star-uniquely_mapped	QualiMap_mqc-generalstats-qualimap-regions_size	QualiMap_mqc-generalstats-qualimap-general_error_rate	FastQC_mqc-generalstats-fastqc-percent_fails	QualiMap_mqc-generalstats-qualimap-percentage_aligned	QualiMap_mqc-generalstats-qualimap-total_reads	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-total_sequences	QualiMap_mqc-generalstats-qualimap-1_x_pc	QualiMap_mqc-generalstats-qualimap-5_3_bias	QualiMap_mqc-generalstats-qualimap-median_coverage	QualiMap_mqc-generalstats-qualimap-regions_mapped_reads	QualiMap_mqc-generalstats-qualimap-median_insert_size	FastQC_mqc-generalstats-fastqc-percent_duplicates	QualiMap_mqc-generalstats-qualimap-percentage_aligned_on_target	QualiMap_mqc-generalstats-qualimap-5_x_pc	QualiMap_mqc-generalstats-qualimap-30_x_pc
+alignment | star |						4.31						53735647.0																
+fastq | qc | Int-01_S42_L005_R1_001									151		151.0				36.36363636363637			49.0	124241212.0						91.26436355509792			
+fastq | qc | Int-01_S42_L005_R2_001									151		151.0				45.45454545454545			50.0	124241212.0						91.67025110934587			
+fastq | qc | Int-02_S43_L005_R1_001									151		151.0				45.45454545454545			50.0	157425190.0						92.7129884711209			
+fastq | qc | Int-02_S43_L005_R2_001									151		151.0				45.45454545454545			51.0	157425190.0						92.96557353005024			
+fastq | qc | Int-03_S44_L005_R1_001									151		151.0				36.36363636363637			49.0	135259783.0						86.20929242959802			
+fastq | qc | Int-03_S44_L005_R2_001									151		151.0				45.45454545454545			50.0	135259783.0						87.26784735964442			
+fastq | qc | Int-04_S45_L005_R1_001									151		151.0				36.36363636363637			49.0	179662246.0						86.12588274270473			
+fastq | qc | Int-04_S45_L005_R2_001									151		151.0				45.45454545454545			50.0	179662246.0						87.78580703249071			
+fastq | qc | Liv-01_S38_L005_R1_001									151		151.0				45.45454545454545			49.0	201832955.0						85.24789464798066			
+fastq | qc | Liv-01_S38_L005_R2_001									151		151.0				54.54545454545454			50.0	201832955.0						87.12453536989233			
+fastq | qc | Liv-02_S39_L005_R1_001									151		151.0				36.36363636363637			52.0	147599477.0						94.31037208265003			
+fastq | qc | Liv-02_S39_L005_R2_001									151		151.0				54.54545454545454			53.0	147599477.0						94.1862474696561			
+fastq | qc | Liv-03_S40_L005_R1_001									151		151.0				45.45454545454545			48.0	204480045.0						83.31018956178637			
+fastq | qc | Liv-03_S40_L005_R2_001									151		151.0				54.54545454545454			49.0	204480045.0						85.26989382180858			
+fastq | qc | Liv-04_S41_L005_R1_001									151		151.0				36.36363636363637			48.0	134662299.0						87.57949591965547			
+fastq | qc | Liv-04_S41_L005_R2_001									151		151.0				45.45454545454545			49.0	134662299.0						88.38408898128841			
+star_counting | counts | star					111838		0.04179036597057858																					
+star_qualimap | star | bam |	131986017.0							741.7427					208164228.0	0.0		5.29881538302089	2490858946.0						100096810.0			75.83895042457415		
+star_qualimap | star | bam | raw_data_qualimapReport | bam			40.203061969408466	26.80126769907844						8.694204174215754										53.47232666700064		1		289			37.71469514925494	12.19348984398991
+star_qualimap | star | rnaseq |		131986017.0																			1.7							
+trimmed | qc | Int-01_S42_L005_R1_001									141		133.39942447535816				36.36363636363637			48.0	121709124.0						92.13794776001325			
+trimmed | qc | Int-01_S42_L005_R2_001									141		133.5375028251785				18.181818181818183			48.0	121709124.0						91.88256603483121			
+trimmed | qc | Int-02_S43_L005_R1_001									141		135.46818686266383				36.36363636363637			48.0	150622727.0						93.28622319313308			
+trimmed | qc | Int-02_S43_L005_R2_001									141		135.6087878956009				27.27272727272727			49.0	150622727.0						92.76421645693665			
+trimmed | qc | Int-03_S44_L005_R1_001									141		135.06905911497748				27.27272727272727			48.0	132078423.0						88.1835225222838			
+trimmed | qc | Int-03_S44_L005_R2_001									141		135.22963679692026				27.27272727272727			48.0	132078423.0						87.55904093262248			
+trimmed | qc | Int-04_S45_L005_R1_001									141		131.75216240978872				27.27272727272727			47.0	174061134.0						88.21666440153686			
+trimmed | qc | Int-04_S45_L005_R2_001									141		131.9797675568401				27.27272727272727			48.0	174061134.0						88.05020276464998			
+trimmed | qc | Liv-01_S38_L005_R1_001									141		130.00599602349806				27.27272727272727			48.0	197437852.0						88.03529772451259			
+trimmed | qc | Liv-01_S38_L005_R2_001									141		130.3101878002603				27.27272727272727			48.0	197437852.0						87.68900277186899			
+trimmed | qc | Liv-02_S39_L005_R1_001									141		129.49899815748802				36.36363636363637			48.0	136362750.0						94.39502264539982			
+trimmed | qc | Liv-02_S39_L005_R2_001									141		129.8470351470618				18.181818181818183			49.0	136362750.0						93.89967883492815			
+trimmed | qc | Liv-03_S40_L005_R1_001									141		136.5597907238759				27.27272727272727			48.0	201937035.0						86.97434985965597			
+trimmed | qc | Liv-03_S40_L005_R2_001									141		136.63400401021042				36.36363636363637			48.0	201937035.0						86.00748119150698			
+trimmed | qc | Liv-04_S41_L005_R1_001									141		134.1703380056038				27.27272727272727			47.0	131220428.0						89.12250531802705			
+trimmed | qc | Liv-04_S41_L005_R2_001									141		134.36694496225846				27.27272727272727			48.0	131220428.0						88.61570998108218			
