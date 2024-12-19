@@ -751,3 +751,27 @@ rule star_align_second:
         cp alignment/star/Log.final.out alignment/star/second-pass.final.out
         
 Submitted job 26 with external jobid '112796'.
+[Wed Dec 18 02:50:32 2024]
+Finished job 36.
+41 of 53 steps (77%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Dec 18 02:50:32 2024]
+rule convert_hisat:
+    input: alignment/hisat/Liv-02_S39_L005.sam
+    output: alignment/hisat/Liv-02_S39_L005.bam
+    jobid: 45
+    reason: Missing output files: alignment/hisat/Liv-02_S39_L005.bam; Input files updated by another job: alignment/hisat/Liv-02_S39_L005.sam
+    wildcards: sample=Liv-02_S39_L005
+    threads: 32
+    resources: mem_mb=64000, mem_mib=61036, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, partition=week
+
+samtools view -@ 32 -b alignment/hisat/Liv-02_S39_L005.sam | samtools sort -@ 32 > alignment/hisat/Liv-02_S39_L005.bam
+Submitted job 45 with external jobid '113057'.
+[Wed Dec 18 02:51:08 2024]
+Finished job 45.
+42 of 53 steps (79%) done
+[Wed Dec 18 13:45:07 2024]
+Finished job 26.
+43 of 53 steps (81%) done
